@@ -59,4 +59,11 @@ Método extraído de um caso real: um portal corporativo em produção (17+ mód
 
 ---
 
-*Versão 1.0 — 2026-07 · Licença: comercial proprietária — ver [LICENSE.md](LICENSE.md)*
+## Autor
+
+**Kasuo** — Arquiteto de Soluções com IA, criador do Método Norte.
+Método extraído e refinado em produção real; contato para licenciamento, implantação e parcerias: kasuo.wkl@gmail.com
+
+---
+
+*Método Norte v1.0 — 2026-07 · © Kasuo · Licença: comercial proprietária — ver [LICENSE.md](LICENSE.md)*

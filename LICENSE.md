@@ -1,6 +1,7 @@
 # Licença de Uso — Método Norte (Starter Kit)
 
-**Copyright © 2026 Kasuo — Todos os direitos reservados.**
+**Copyright © 2026 Kasuo — Arquiteto de Soluções com IA, criador do Método Norte.**
+**Todos os direitos reservados.**
 
 ## Concessão de licença
 
