@@ -11,6 +11,13 @@ Versionamento: correção = 1.0.x · template ou seção nova = 1.x.0 · mudanç
 
 ---
 
+## v1.0.1 — 2026-07-17
+
+- [fix] Nome unificado no prompt de setup do `INSTALACAO.md` ("Método Documentação-IA" → "Método Norte") — interno
+- [fix] Removido arquivo órfão `ziDdTn9Z` (cópia acidental do `.skill`) — interno
+- [novo] `tools/build.js`: `template/` vira fonte canônica; o build sincroniza `template/` → `skill/metodo-norte/recursos/` e regera o `metodo-norte.skill` num comando (elimina divergência entre as duas cópias) — interno
+- [doc] `PROCESSO-MELHORIAS.md` atualizado com o passo de build — interno
+
 ## v1.0.0 — 2026-07-17
 
 - [novo] Starter kit inicial: 17 templates com instruções 📝, guia de instalação com prompt de setup, exemplo Aurora Sistemas, validador, licença comercial — interno

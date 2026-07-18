@@ -9,7 +9,7 @@ Este guia leva sua equipe do zero até a documentação funcionando. Tempo típi
 Copie a pasta `template/` para onde sua documentação vai morar, renomeie (ex.: `Documentacao-Padrao-MinhaEmpresa`), abra a pasta na sua IA (Claude Code, Cursor…) e cole este prompt:
 
 ```text
-Você vai me ajudar a implantar o Método Documentação-IA nesta pasta.
+Você vai me ajudar a implantar o Método Norte nesta pasta.
 
 Faça-me as perguntas do questionário abaixo, UMA POR VEZ, e use minhas
 respostas para preencher os arquivos .template.md (removendo o sufixo

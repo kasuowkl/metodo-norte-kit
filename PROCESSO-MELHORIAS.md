@@ -35,9 +35,10 @@ Prioridade: o que **impediu** o piloto de avançar > o que confundiu > o que fal
 ## 2. Correção
 
 - Corrigir **no template**, não só explicar ao piloto — o próximo comprador não pode tropeçar no mesmo lugar
+- **`template/` é a fonte canônica** — nunca editar `skill/metodo-norte/recursos/` nem o `.skill` à mão
 - Cada travada corrigida deve responder: "se o próximo piloto chegar aqui, ele passa direto?"
 - Rodar `node template/tools/validar-doc.js` após mexer nos templates
-- Se a correção mudar o SKILL.md ou os `recursos/`, **regerar o `metodo-norte.skill`** (rezipar a pasta `skill/metodo-norte/`)
+- Após qualquer mudança em `template/` ou no `SKILL.md`: **rodar `node tools/build.js`** — sincroniza `template/` → `recursos/` e regera o `metodo-norte.skill`
 
 ## 3. Registro
 
