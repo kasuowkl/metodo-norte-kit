@@ -11,6 +11,10 @@ Versionamento: correção = 1.0.x · template ou seção nova = 1.x.0 · mudanç
 
 ---
 
+## v1.1.1 — 2026-07-20
+
+- [fix] Módulo `sincronizarAmbientes`: **inverte a recomendação** — o método principal passa a ser **unificar** `CLAUDE.md`/`.env.example` (genéricos e idênticos nos 2 lados, config só no `.env`), com o que o sync vira **`git pull` puro**. A cerimônia `--no-ff --no-commit` + `checkout HEAD -- ...` foi rebaixada a **"Plano B"** (só quando um arquivo PRECISA divergir e não cabe no `.env`). Motivo: em produção descobriu-se que "proteger no merge" resolve o sintoma, mas **unificar elimina a causa** — mais simples pro cliente e ainda tira segredos de arquivo versionado — interno (lição de produção)
+
 ## v1.1.0 — 2026-07-20
 
 - [novo] Módulo `modulos/sincronizarAmbientes.template.md` — sincronizar ambientes espelhados (mesmo código, repos/servidores/bancos separados) com **comprovante**: padrão de remotes, arquivos que não viajam entre ambientes, e o **método à prova de bala** para preservar `CLAUDE.md`/`.env` no merge (`--no-ff --no-commit` + `git checkout HEAD -- ...`) — interno (lição de produção)

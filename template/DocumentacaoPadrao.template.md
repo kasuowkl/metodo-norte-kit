@@ -33,7 +33,7 @@ Mesmo código, mas **cada ambiente tem seu próprio repositório, servidor e ban
 
 1. **Nunca misturar** credenciais, `.env`, bancos ou conexões entre ambientes.
 2. Ao identificar o sistema, **confirmar em qual ambiente** a tarefa acontece antes de mexer em deploy, banco ou `.env`.
-3. **Arquivos por-ambiente** (`CLAUDE.md`, `.env`) **não viajam** entre ambientes — ver a armadilha e o método seguro em [modulos/sincronizarAmbientes.md](modulos/sincronizarAmbientes.template.md).
+3. **Configuração de ambiente vive só no `.env`** (IP, porta, senha, caminho) — nunca chumbada no `CLAUDE.md`/`.env.example`. Mantendo esses arquivos genéricos e idênticos nos dois lados, a sincronização vira `git pull` puro — ver [modulos/sincronizarAmbientes.md](modulos/sincronizarAmbientes.template.md) (o `.env` real, esse sim, nunca viaja).
 4. **Sincronizar com comprovante:** toda troca de código usa o carimbo [SINCRONIZACAO.md](SINCRONIZACAO.template.md) para provar que chegou.
 
 | Ambiente | Repositório | Onde roda | Observação |
