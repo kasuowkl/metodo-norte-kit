@@ -48,7 +48,7 @@ Faça as perguntas abaixo **uma por vez** (aguarde cada resposta):
 1. Nome da empresa/equipe?
 2. Quais SISTEMAS existem hoje? Para cada um: nome, ID curto (ex.: `portal-rh`), onde fica o código, banco, e status (produção/desenvolvimento/legado)
 3. Qual a STACK PADRÃO para sistemas novos? E o que é PROIBIDO sem pedido explícito?
-4. Existem AMBIENTES separados (dev/prod, matriz/filial)? Como os segredos de cada um são gerenciados?
+4. Existem AMBIENTES separados (dev/prod, matriz/filial, casa/empresa)? Como os segredos de cada um são gerenciados? Eles são **espelhados** (mesmo código sincronizado entre eles)? Se sim, como o código atravessa (git remote/pull)?
 5. Quais INTEGRAÇÕES externas existem (e-mail, mensageria, ERP, APIs)?
 6. Como funciona AUTENTICAÇÃO e PERMISSÃO hoje?
 7. Quais CONVENÇÕES de código existem (tabelas, rotas, pastas)? Se não houver, proponha e peça aprovação
@@ -63,9 +63,10 @@ Faça as perguntas abaixo **uma por vez** (aguarde cada resposta):
 3. Siga as instruções 📝 dentro de cada arquivo e **remova esses blocos** ao concluir
 4. Se o código dos sistemas estiver acessível: **verifique no código real** (árvore de pastas, nomes de tabelas) em vez de confiar só na memória do usuário — e varra por funções duplicadas para popular o catálogo de padrões
 5. Capriche nos **Bloqueios absolutos** de `regrasGerais.md`: cada erro que o usuário relatar da IA vira um "Não fazer X"
-6. Transforme as respostas da pergunta 9 em ADRs numerados em `decisoes/`
-7. Copie `tools/validar-doc.js`, rode `node tools/validar-doc.js` e corrija até 0 erros
-8. Gere o `CLAUDE.md` de cada projeto de código apontando para o hub
+6. **Ambientes:** se forem espelhados (pergunta 4), mantenha e preencha `modulos/sincronizarAmbientes.template.md` + o carimbo `SINCRONIZACAO.template.md`. Se for **ambiente único**, remova esses dois e a seção "Ambientes" do hub
+7. Transforme as respostas da pergunta 9 em ADRs numerados em `decisoes/`
+8. Copie `tools/validar-doc.js`, rode `node tools/validar-doc.js` e corrija até 0 erros
+9. Gere o `CLAUDE.md` de cada projeto de código apontando para o hub
 
 ### Passo 3 — Entrega
 

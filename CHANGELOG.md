@@ -11,6 +11,13 @@ Versionamento: correção = 1.0.x · template ou seção nova = 1.x.0 · mudanç
 
 ---
 
+## v1.1.0 — 2026-07-20
+
+- [novo] Módulo `modulos/sincronizarAmbientes.template.md` — sincronizar ambientes espelhados (mesmo código, repos/servidores/bancos separados) com **comprovante**: padrão de remotes, arquivos que não viajam entre ambientes, e o **método à prova de bala** para preservar `CLAUDE.md`/`.env` no merge (`--no-ff --no-commit` + `git checkout HEAD -- ...`) — interno (lição de produção)
+- [novo] Carimbo `SINCRONIZACAO.template.md` — comprovante vivo de sincronização (contador `SYNC #`, quem incrementa vs quem só se atualiza, como conferir no destino) — interno
+- [novo] Hub: seção "Ambientes" reforçada (isolamento + link p/ o módulo de sync + carimbo), linha no Índice por Assunto, entrada na árvore "Estrutura da pasta" e passo 8 no `COMO-USAR.md` — interno
+- [fix] Validador (`tools/validar-doc.js`): `SINCRONIZACAO.md`/`.template.md` dispensados de front-matter (é comprovante, não documento) — interno
+
 ## v1.0.1 — 2026-07-17
 
 - [fix] Nome unificado no prompt de setup do `INSTALACAO.md` ("Método Documentação-IA" → "Método Norte") — interno

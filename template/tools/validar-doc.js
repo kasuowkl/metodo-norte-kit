@@ -11,7 +11,7 @@ const path = require('path');
 
 const RAIZ = path.resolve(__dirname, '..');
 const IGNORAR_DIRS = new Set(['.git', 'node_modules', 'tools']);
-const SEM_FRONTMATTER_OK = new Set(['CLAUDE.md', 'CLAUDE.template.md']);
+const SEM_FRONTMATTER_OK = new Set(['CLAUDE.md', 'CLAUDE.template.md', 'SINCRONIZACAO.md', 'SINCRONIZACAO.template.md']);
 const CAMPOS_OBRIGATORIOS = ['tipo', 'sistema', 'status', 'ultima_revisao'];
 const HUB = fs.existsSync(path.join(__dirname, '..', 'DocumentacaoPadrao.md')) ? 'DocumentacaoPadrao.md' : 'DocumentacaoPadrao.template.md';
 

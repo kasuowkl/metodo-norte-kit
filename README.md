@@ -32,6 +32,7 @@ Os pilares do método:
 - **Estado atual + progresso mensal** — status curto sempre à mão; histórico fatiado que não pesa no contexto
 - **Validador automático** — script que confere links, metadados e cobertura do índice (a doc se autotesta)
 - **Templates de código** — esqueletos prontos para a IA copiar, não reescrever
+- **Sincronização de ambientes com comprovante** — dois ambientes espelhados que trocam código sem misturar config, com um carimbo que prova que sincronizou (para quem tem casa/empresa, matriz/filial, dev/prod)
 
 ## O que tem no kit
 
@@ -66,4 +67,4 @@ Método extraído e refinado em produção real; contato para licenciamento, imp
 
 ---
 
-*Método Norte v1.0 — 2026-07 · © Kasuo · Licença: comercial proprietária — ver [LICENSE.md](LICENSE.md)*
+*Método Norte v1.1 — 2026-07 · © Kasuo · Licença: comercial proprietária — ver [LICENSE.md](LICENSE.md)*

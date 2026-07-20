@@ -38,3 +38,4 @@ Ao alterar estrutura de um sistema ou criar sistema novo:
 5. Registrar em `progresso/AAAA-MM.md` + atualizar `ESTADO-ATUAL.md`
 6. Decisão de arquitetura estável → ADR em `decisoes/`
 7. Rodar `node tools/validar-doc.js` antes de commitar
+8. Se você tem ambientes espelhados: ao trocar código entre eles, siga `modulos/sincronizarAmbientes.md` e atualize o carimbo `SINCRONIZACAO.md`

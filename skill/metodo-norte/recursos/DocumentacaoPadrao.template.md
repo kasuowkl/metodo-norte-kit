@@ -25,15 +25,22 @@ ultima_revisao: AAAA-MM-DD
 
 ## ⚠️ Ambientes (se aplicável — LER PRIMEIRO)
 
-> 📝 Se você tem ambientes separados (dev/homolog/prod, matriz/filial, casa/empresa),
-> descreva-os aqui numa tabela + regras de isolamento (nunca misturar credenciais/bancos;
-> confirmar o ambiente antes de deploy). Se não tem, apague esta seção.
+> 📝 Se você tem ambientes **espelhados** (dev/homolog/prod, matriz/filial, casa/empresa),
+> descreva-os aqui numa tabela. Se você tem um só ambiente, **apague esta seção** e o módulo
+> `sincronizarAmbientes` e o arquivo `SINCRONIZACAO.md`.
+
+Mesmo código, mas **cada ambiente tem seu próprio repositório, servidor e banco**. Regras de isolamento:
+
+1. **Nunca misturar** credenciais, `.env`, bancos ou conexões entre ambientes.
+2. Ao identificar o sistema, **confirmar em qual ambiente** a tarefa acontece antes de mexer em deploy, banco ou `.env`.
+3. **Arquivos por-ambiente** (`CLAUDE.md`, `.env`) **não viajam** entre ambientes — ver a armadilha e o método seguro em [modulos/sincronizarAmbientes.md](modulos/sincronizarAmbientes.template.md).
+4. **Sincronizar com comprovante:** toda troca de código usa o carimbo [SINCRONIZACAO.md](SINCRONIZACAO.template.md) para provar que chegou.
 
 | Ambiente | Repositório | Onde roda | Observação |
 |----------|-------------|-----------|------------|
 | [PROD] | [...] | [...] | [...] |
 
-**Estado atual dos ambientes:** [ESTADO-ATUAL.md](ESTADO-ATUAL.template.md)
+**Estado atual dos ambientes:** [ESTADO-ATUAL.md](ESTADO-ATUAL.template.md) · **Como sincronizar:** [modulos/sincronizarAmbientes.md](modulos/sincronizarAmbientes.template.md)
 
 ---
 
@@ -98,6 +105,7 @@ Após identificar o sistema, localize o tipo de solicitação.
 | Testes, validação, qualidade | [modulos/testesQualidade.md](modulos/testesQualidade.template.md) |
 | Ver tudo que já foi implementado | [referencia/catalogo-implementacoes.md](referencia/catalogo-implementacoes.template.md) |
 | Entender uma decisão de arquitetura | [decisoes/](decisoes/LEIA-ME.md) |
+| Sincronizar ambientes espelhados / conferir que sincronizou | [modulos/sincronizarAmbientes.md](modulos/sincronizarAmbientes.template.md) *(se aplicável)* |
 
 > 📝 Adicione linhas conforme assuntos aparecerem. A pergunta-guia: "quando alguém pedir X,
 > que arquivos a IA precisa ler para fazer certo?" Combine leituras ("cenário → módulos
@@ -142,8 +150,9 @@ Se arquivo obrigatório estiver ausente ou contraditório, **avisar antes de pro
 ├── CLAUDE.md                    ← entrada para a IA nos projetos
 ├── DocumentacaoPadrao.md        ← VOCÊ ESTÁ AQUI (hub)
 ├── ESTADO-ATUAL.md              ← status vivo + pendências (curto)
+├── SINCRONIZACAO.md             ← carimbo de sync entre ambientes (se aplicável)
 ├── COMO-USAR.md
-├── modulos/                     ← regras por assunto
+├── modulos/                     ← regras por assunto (inclui sincronizarAmbientes, se aplicável)
 ├── sistemas/                    ← uma ficha por sistema (modelo: ficha-sistema.md)
 ├── referencia/                  ← catálogos (implementações, padrões)
 ├── progresso/                   ← histórico fatiado por mês
