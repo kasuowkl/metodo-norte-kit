@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Dúvidas & conversa (fórum)
+    url: https://github.com/kasuowkl/metodo-norte-kit/discussions
+    about: Perguntas, ideias abertas e conversa geral ficam nas Discussions — o fórum da comunidade.
+  - name: 🌟 Mostre seu resultado
+    url: https://github.com/kasuowkl/metodo-norte-kit/discussions/categories/show-and-tell
+    about: Usou e deu certo? Compartilhe seu caso em "Show and tell".
+  - name: ❓ Perguntas (Q&A)
+    url: https://github.com/kasuowkl/metodo-norte-kit/discussions/categories/q-a
+    about: Precisa de ajuda pra implantar? Pergunte no Q&A e a comunidade responde.

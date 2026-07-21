@@ -11,6 +11,10 @@ Versionamento: correção = 1.0.x · template ou seção nova = 1.x.0 · mudanç
 
 ---
 
+## v1.2.2 — 2026-07-21
+
+- [novo] **Canais de feedback da comunidade:** 3 issue templates (🐛 bug/atrito, 💡 sugestão, 🧪 "testei — conta como foi", este captando stack/IA/equipe/nota) + `config.yml` que desliga issue em branco e roteia dúvidas p/ as Discussions. README com tabela "Testou? Conta pra gente" ligando cada tipo de feedback ao canal certo (issues + Discussions Q&A/Show-and-tell). Perguntas reaproveitadas do FEEDBACK-PILOTO interno — interno
+
 ## v1.2.1 — 2026-07-21
 
 - [doc] **Publicação open-source (MIT):** o kit passou a ser público sob licença **MIT** (uso livre com atribuição). README com badge + seções "Contribuindo" (issues/PR/Discussions) e "Autor"; IP de exemplo do módulo de sincronização trocado por valor genérico (`10.0.0.10`/`3000`) — interno

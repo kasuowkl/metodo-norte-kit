@@ -62,15 +62,26 @@ Método extraído de um caso real: um portal corporativo em produção (17+ mód
 
 ---
 
+## 🧪 Testou? Conta pra gente (leva ~3 min)
+
+Este método nasceu numa stack só (portal corporativo, Node + MSSQL). **O feedback de quem testa em
+outras stacks é o que mais o melhora** — inclusive as travadas e o que ficou confuso. Escolha o canal:
+
+| Você quer... | Vá para |
+|--------------|---------|
+| 🐛 Reportar um bug ou atrito | [Nova issue → Bug ou atrito](../../issues/new?template=1-bug-atrito.yml) |
+| 💡 Sugerir uma melhoria | [Nova issue → Sugestão](../../issues/new?template=2-sugestao.yml) |
+| 🧪 Contar como foi seu teste | [Nova issue → Testei, conta como foi](../../issues/new?template=3-testei-como-foi.yml) |
+| 🌟 Mostrar um caso de sucesso | [Discussions → Show and tell](../../discussions/categories/show-and-tell) |
+| ❓ Pedir ajuda pra implantar | [Discussions → Q&A](../../discussions/categories/q-a) |
+| 💬 Conversar / ideias abertas | [Discussions](../../discussions) |
+
+**As [Discussions](../../discussions) são o fórum da comunidade** — passe por lá mesmo que só pra dizer oi.
+
 ## Contribuindo
 
-Este método nasceu em produção real e melhora com o uso de quem o adota. Se você testou e
-tem sugestões, correções ou quer relatar como foi na sua stack:
-
-- Abra uma **issue** ou um **pull request** aqui no repositório
-- Dúvidas e ideias também são bem-vindas nas **Discussions**
-
-Toda contribuição é creditada. A esteira de versionamento está no [CHANGELOG.md](CHANGELOG.md).
+Pull requests são bem-vindos. Toda contribuição é creditada; a esteira de versionamento está no
+[CHANGELOG.md](CHANGELOG.md).
 
 ---
 
