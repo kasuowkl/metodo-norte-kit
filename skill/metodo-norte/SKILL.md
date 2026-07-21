@@ -24,6 +24,12 @@ Esta skill tem **dois modos**. Detecte qual se aplica:
 
 Antes de **qualquer** criação, alteração, correção, análise ou remoção de código:
 
+0. **Ritual de abertura (se o hub tiver a Regra #0):** no **início da sessão**, antes da primeira
+   tarefa, leia `ESTADO-ATUAL.md` + o `progresso/` do mês corrente e **apresente ao usuário um resumo
+   curto das pendências abertas** (itens `[ ]`, segurança em destaque) — **sem esperar ele pedir**. Se
+   houver **ambientes espelhados**, saiba/**pergunte em qual ambiente** você está antes de agir (as
+   pendências a reportar são as dele) e, se a doc mora em git, verifique se o clone está atrás do
+   remoto e **pergunte** antes de dar `git pull` (para reportar a lista atual). Nunca puxar/subir sozinho.
 1. **Leia o hub** `DocumentacaoPadrao.md` da pasta de documentação do projeto
 2. **Identifique o sistema** no Catálogo de Sistemas (+ o **ambiente**, se houver mais de um). Se não estiver claro, **pergunte antes de executar**
 3. **Identifique a tarefa** no Índice por Assunto e leia **apenas** os arquivos indicados (não leia tudo)

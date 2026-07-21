@@ -13,6 +13,17 @@ ultima_revisao: AAAA-MM-DD
 2. Abra a IA **na pasta do projeto** — ela carrega o gancho e segue o protocolo
 3. Teste: peça uma tarefa real e confira se a IA responde "Sistema identificado / Arquivos lidos / Plano" antes de executar
 
+### Ritual de abertura (Regra #0 — opcional)
+
+Se você manteve a **Regra #0** no hub, a IA passa a, **no início de cada sessão** e sem você pedir,
+ler `ESTADO-ATUAL.md` + o `progresso/` do mês e **te devolver um resumo das pendências abertas**
+(as de segurança em destaque) — e, se você tem ambientes espelhados, confirmar em qual está antes de
+agir. É o que faz a doc "trabalhar por você" logo na abertura. Para o comportamento ser confiável:
+
+- mantenha o `ESTADO-ATUAL.md` **curto e atual** (é dele que sai o resumo);
+- se sua IA suportar um gatilho de início de sessão (ex.: hook `SessionStart` no Claude Code),
+  aponte-o para o hub/`ESTADO-ATUAL.md` — assim a Regra #0 dispara mesmo que a IA "esqueça".
+
 ## Fluxo de trabalho
 
 ```

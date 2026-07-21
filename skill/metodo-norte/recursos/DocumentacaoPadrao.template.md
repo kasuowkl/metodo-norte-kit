@@ -115,6 +115,31 @@ Após identificar o sistema, localize o tipo de solicitação.
 
 ## Passo 3 – Regras de ouro
 
+> 📝 **RITUAL DE ABERTURA (Regra #0) — opcional, mas é o que faz a IA "chegar sabendo".**
+> As três sub-regras abaixo transformam esta documentação de "arquivo que a IA consulta quando
+> lembra" em "arquivo que a IA lê **toda sessão, antes de agir**, e do qual ela te **devolve um
+> resumo**". É a diferença entre uma doc parada e uma doc que trabalha por você. Se você quer esse
+> comportamento, **mantenha a Regra #0 abaixo e ajuste os [ ]**; se não quer, apague-a. As partes
+> `0b`/`0c` (ambiente + sincronização) só valem se você tem **ambientes espelhados** — se tem um só
+> ambiente, apague-as junto com o módulo `sincronizarAmbientes`.
+
+0. **Ler o estado ao iniciar a sessão — e REPORTAR as pendências.** Antes de **qualquer** ação, ler
+   este hub + [ESTADO-ATUAL.md](ESTADO-ATUAL.template.md) + o [progresso/](progresso/AAAA-MM.template.md)
+   do mês corrente. **E não basta ler em silêncio:** ao iniciar, **apresentar ao usuário um resumo
+   curto das pendências abertas** (os itens `[ ]` de `ESTADO-ATUAL.md`, com as de segurança em
+   destaque), **sem esperar ele pedir**. É isso que faz "verificar o que falta" funcionar sozinho no
+   começo de cada sessão. *(Se a doc mora num repositório git, atualizá-la antes de ler — ver #0c —
+   para não reportar uma lista velha.)*
+   > 📝 Adapte: se você não usa `ESTADO-ATUAL.md`/`progresso/`, aponte para onde suas pendências vivem.
+   0b. **[Se há ambientes espelhados] Saber em QUAL ambiente está antes de agir.** Mesmo código, mas
+       repositórios/servidores/bancos diferentes. Ao iniciar, identificar o ambiente; se não estiver
+       claro pelo contexto, **PERGUNTAR antes de qualquer ação** (deploy, banco, `.env`, commit) —
+       nunca assumir. As pendências a reportar (#0) são **as do ambiente atual**.
+   0c. **[Se há ambientes espelhados] Sincronizar via git — PERGUNTANDO, nunca sozinho.** Ao iniciar,
+       verificar se o clone local está **atrás** do remoto (`git fetch` + comparar); se estiver,
+       **perguntar** se quer `git pull` (para reportar a lista atual, não a velha). Ao encerrar/depois
+       de algo relevante, verificar trabalho **não-enviado** e **perguntar** se quer commitar+push.
+       Detalhes: [modulos/sincronizarAmbientes.md](modulos/sincronizarAmbientes.template.md).
 1. **Sistema novo = stack padrão** — sem exceção, salvo pedido explícito
 2. **Não inventar** tabelas, colunas, rotas, serviços ou pastas — na dúvida, verificar o código real
 3. **Priorizar código real** sobre arquitetura conceitual
@@ -129,13 +154,15 @@ Após identificar o sistema, localize o tipo de solicitação.
 12. **Segurança é bloqueante** — tarefa que toca senha/segredo/exposição segue [modulos/seguranca.md](modulos/seguranca.template.md)
 13. **Ao mexer na doc, rodar o validador** — `node tools/validar-doc.js`; não commitar com erro
 
-> 📝 As 13 acima são o núcleo do método — recomendamos manter todas. Adicione as suas depois delas.
+> 📝 A #0 é opcional (ritual de abertura); as demais são o núcleo do método — recomendamos manter todas. Adicione as suas depois delas.
 
 ---
 
 ## Passo 4 – Como a IA deve responder
 
 Antes de executar, informar: **Sistema** identificado (+ ambiente, se houver) · **Tipo de tarefa** · **Arquivos lidos** · **Área impactada** · **Risco principal** · **Ação planejada**.
+
+**No início da sessão** (se a Regra #0 estiver ativa), antes até da primeira tarefa: confirmar que leu o estado e **apresentar o resumo das pendências abertas** do `ESTADO-ATUAL.md` (segurança em destaque).
 
 Se arquivo obrigatório estiver ausente ou contraditório, **avisar antes de prosseguir**.
 

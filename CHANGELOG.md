@@ -11,6 +11,12 @@ Versionamento: correção = 1.0.x · template ou seção nova = 1.x.0 · mudanç
 
 ---
 
+## v1.2.0 — 2026-07-21
+
+- [novo] **Ritual de abertura (Regra #0)** no hub (`DocumentacaoPadrao.template.md`): opcional, mas é o que faz a IA **ler o estado ao iniciar a sessão e REPORTAR as pendências abertas** ao usuário (itens `[ ]` do `ESTADO-ATUAL.md`, segurança em destaque) **sem ele pedir** — transforma a doc de "consultada quando a IA lembra" em "lida toda sessão, com resumo devolvido". Sub-regras `0b` (saber/perguntar o ambiente antes de agir) e `0c` (sincronizar via git perguntando) ficam **condicionais a ambientes espelhados**. Marcada `[ ]` para o cliente ativar/adaptar — interno (lição de produção: o relatório de início virou o momento mais útil do método)
+- [novo] Skill `metodo-norte` (MODO OPERAÇÃO): **passo 0** espelhando o ritual — ler `ESTADO-ATUAL.md`/`progresso/` e apresentar o resumo de pendências antes da primeira tarefa; se há ambientes espelhados, confirmar qual antes de agir e perguntar antes de `git pull` — interno
+- [doc] `COMO-USAR.md`: seção "Ritual de abertura (Regra #0)" — como ativar, manter `ESTADO-ATUAL.md` curto e (se a IA suportar) apontar um gatilho de início de sessão (ex.: hook `SessionStart`) para reforçar — interno
+
 ## v1.1.1 — 2026-07-20
 
 - [fix] Módulo `sincronizarAmbientes`: **inverte a recomendação** — o método principal passa a ser **unificar** `CLAUDE.md`/`.env.example` (genéricos e idênticos nos 2 lados, config só no `.env`), com o que o sync vira **`git pull` puro**. A cerimônia `--no-ff --no-commit` + `checkout HEAD -- ...` foi rebaixada a **"Plano B"** (só quando um arquivo PRECISA divergir e não cabe no `.env`). Motivo: em produção descobriu-se que "proteger no merge" resolve o sintoma, mas **unificar elimina a causa** — mais simples pro cliente e ainda tira segredos de arquivo versionado — interno (lição de produção)
