@@ -11,6 +11,12 @@ Versionamento: correção = 1.0.x · template ou seção nova = 1.x.0 · mudanç
 
 ---
 
+## v1.3.0 — 2026-07-24
+
+- [novo] **Disciplina de verificação** (inspirada no Fable Method, de Sahir619 — reescrita, com crédito): `regrasGerais` ganha "**Retry limitado**" (3 ciclos de verificação falha → parar e devolver, não ficar em loop); `testesQualidade` ganha "**Verificar por observação ≠ inferência**" (confirmar o "pronto" rodando/vendo, não deduzindo) + "**Gêmeos do defeito (TWINS)**" (ao corrigir bug, varrer o mesmo padrão em outros lugares) + 3 bloqueios novos — interno
+- [novo] Skill `metodo-norte` (MODO OPERAÇÃO): passo 4 ganha "**Define Done**" (declarar o critério de verificação antes de agir); passos 5–6 incorporam TWINS, retry 3x e verificação por observação — interno
+- [novo] **`CREDITOS.md`** na raiz + seção "Créditos" no `README.md`: reconhece contribuições externas (Fable Method / Sahir619) e a **coautoria de IA** no desenvolvimento do método. Regra de reconhecimento como princípio (crédito é parte da honestidade do método) — a pedido de Kasuo
+
 ## v1.2.0 — 2026-07-21
 
 - [novo] **Ritual de abertura (Regra #0)** no hub (`DocumentacaoPadrao.template.md`): opcional, mas é o que faz a IA **ler o estado ao iniciar a sessão e REPORTAR as pendências abertas** ao usuário (itens `[ ]` do `ESTADO-ATUAL.md`, segurança em destaque) **sem ele pedir** — transforma a doc de "consultada quando a IA lembra" em "lida toda sessão, com resumo devolvido". Sub-regras `0b` (saber/perguntar o ambiente antes de agir) e `0c` (sincronizar via git perguntando) ficam **condicionais a ambientes espelhados**. Marcada `[ ]` para o cliente ativar/adaptar — interno (lição de produção: o relatório de início virou o momento mais útil do método)

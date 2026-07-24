@@ -60,6 +60,12 @@ Método extraído de um caso real: um portal corporativo em produção (17+ mód
 
 ---
 
+## Créditos
+
+O método reconhece as ideias externas que adota e a coautoria de IA no seu desenvolvimento — ver [CREDITOS.md](CREDITOS.md). Destaque: as disciplinas de **verificação por observação**, **gêmeos do defeito (TWINS)** e **retry limitado** foram inspiradas no **Fable Method**, de **Sahir619** (github.com/Sahir619/fable-method), reescritas na linguagem do Método Norte. Crédito e agradecimento ao autor.
+
+---
+
 ## Autor
 
 **Kasuo** — Arquiteto de Soluções com IA, criador do Método Norte.
@@ -67,4 +73,4 @@ Método extraído e refinado em produção real; contato para licenciamento, imp
 
 ---
 
-*Método Norte v1.1 — 2026-07 · © Kasuo · Licença: comercial proprietária — ver [LICENSE.md](LICENSE.md)*
+*Método Norte v1.3.0 — 2026-07 · © Kasuo · Licença: comercial proprietária — ver [LICENSE.md](LICENSE.md)*

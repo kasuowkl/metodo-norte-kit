@@ -13,6 +13,26 @@ ultima_revisao: AAAA-MM-DD
 
 **Validação manual não escala com IA.** A IA produz código rápido demais para o QA humano acompanhar — todo código novo vem com teste automatizado sempre que viável, senão regressão silenciosa é questão de tempo.
 
+## Verificar por observação, nunca por inferência
+
+**"Pronto" só vale se foi observado — não deduzido.** Antes de considerar uma tarefa concluída:
+
+- **Defina o "pronto" ANTES de agir** (Define Done): em 1–2 frases, diga o que é concluído **e como será verificado** (qual comando roda, qual tela abre, qual valor deve aparecer). Sem critério de verificação declarado, não comece.
+- **Ao final, confirme esse critério por observação:** rodar o teste e ver passar, abrir a tela e ver o resultado, consultar o banco e ver a linha. **Proibido** afirmar sucesso por dedução ("deve funcionar", "a lógica está certa") sem ter visto.
+- **Verifique o entorno:** o que funcionava ao redor continua funcionando (não quebrou nada vizinho).
+
+*(Disciplina inspirada no Fable Method — ver [CREDITOS.md](../CREDITOS.template.md).)*
+
+## Gêmeos do defeito (TWINS) — ao corrigir um bug
+
+Um bug quase nunca está sozinho: o mesmo padrão errado costuma se repetir. Ao corrigir, **procure os gêmeos** antes de encerrar e registre literalmente no relatório:
+
+```
+TWINS: procurei <padrão/trecho> — achei <N> outros lugares: <lista de arquivos:linha ou "nenhum">
+```
+
+Se achar gêmeos, corrija todos (ou registre por que ficaram de fora). Corrigir 1 de 5 ocorrências e reportar "resolvido" é falso-concluído.
+
 ## Padrão de teste automatizado
 
 - **Runner:** [defina — recomendação: o nativo da sua stack, zero dependência nova]
@@ -39,4 +59,7 @@ ultima_revisao: AAAA-MM-DD
 ## Bloqueios
 
 - Não considerar tarefa concluída sem validação
+- **Não afirmar sucesso por inferência** — só "concluído" com o critério observado (rodou/viu), nunca deduzido
+- **Não reportar bug corrigido sem a varredura de gêmeos** (linha `TWINS:`)
+- **Não insistir além de 3 ciclos** de verificação falha — parar e devolver o estado
 - Não usar credencial real em código de teste
