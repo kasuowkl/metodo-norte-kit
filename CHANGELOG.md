@@ -13,6 +13,7 @@ Versionamento: correção = 1.0.x · template ou seção nova = 1.x.0 · mudanç
 
 ## v1.3.0 — 2026-07-24
 
+- [licença] **Mudança de licença: comercial proprietária → open-source MIT.** `LICENSE.md` reescrita como MIT; README e rodapé da apresentação (`Apresentacao-Metodo-Norte.pptx`, slides 8 e 11) atualizados para v1.3.0 + MIT via `tools/atualizar-apresentacao.py`. Autoria de Kasuo preservada no copyright — a pedido de Kasuo
 - [novo] **Disciplina de verificação** (inspirada no Fable Method, de Sahir619 — reescrita, com crédito): `regrasGerais` ganha "**Retry limitado**" (3 ciclos de verificação falha → parar e devolver, não ficar em loop); `testesQualidade` ganha "**Verificar por observação ≠ inferência**" (confirmar o "pronto" rodando/vendo, não deduzindo) + "**Gêmeos do defeito (TWINS)**" (ao corrigir bug, varrer o mesmo padrão em outros lugares) + 3 bloqueios novos — interno
 - [novo] Skill `metodo-norte` (MODO OPERAÇÃO): passo 4 ganha "**Define Done**" (declarar o critério de verificação antes de agir); passos 5–6 incorporam TWINS, retry 3x e verificação por observação — interno
 - [novo] **`CREDITOS.md`** na raiz + seção "Créditos" no `README.md`: reconhece contribuições externas (Fable Method / Sahir619) e a **coautoria de IA** no desenvolvimento do método. Regra de reconhecimento como princípio (crédito é parte da honestidade do método) — a pedido de Kasuo

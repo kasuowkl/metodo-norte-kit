@@ -73,4 +73,4 @@ Método extraído e refinado em produção real; contato para licenciamento, imp
 
 ---
 
-*Método Norte v1.3.0 — 2026-07 · © Kasuo · Licença: comercial proprietária — ver [LICENSE.md](LICENSE.md)*
+*Método Norte v1.3.0 — 2026-07 · © Kasuo · Open-source sob Licença MIT — ver [LICENSE.md](LICENSE.md)*
