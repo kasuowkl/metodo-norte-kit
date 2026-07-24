@@ -11,13 +11,14 @@ Versionamento: correção = 1.0.x · template ou seção nova = 1.x.0 · mudanç
 
 ---
 
-## v1.2.2 — 2026-07-21
+## v1.3.0 — 2026-07-24
 
-- [novo] **Canais de feedback da comunidade:** 3 issue templates (🐛 bug/atrito, 💡 sugestão, 🧪 "testei — conta como foi", este captando stack/IA/equipe/nota) + `config.yml` que desliga issue em branco e roteia dúvidas p/ as Discussions. README com tabela "Testou? Conta pra gente" ligando cada tipo de feedback ao canal certo (issues + Discussions Q&A/Show-and-tell). Perguntas reaproveitadas do FEEDBACK-PILOTO interno — interno
-
-## v1.2.1 — 2026-07-21
-
-- [doc] **Publicação open-source (MIT):** o kit passou a ser público sob licença **MIT** (uso livre com atribuição). README com badge + seções "Contribuindo" (issues/PR/Discussions) e "Autor"; IP de exemplo do módulo de sincronização trocado por valor genérico (`10.0.0.10`/`3000`) — interno
+- [apresentação] **Slide novo "Os relatórios que a IA devolve"** (slide 6): ESTADO-ATUAL, progresso mensal, plano-antes-de-agir e verificação provada (TWINS) — mostra a rastreabilidade do método. Frase final ajustada ("ela fica ainda mais confiável", tom positivo). Capa + slide destacados no README como imagens (`docs/img/`). `tools/adicionar-slide-relatorios.py` gera o slide no padrão visual
+- [fix] `tools/atualizar-apresentacao.py`: o `sys.exit(1)` de "texto não encontrado" abortava **antes** do `prs.save()` — quando uma substituição já estava aplicada (release anterior), o arquivo não era salvo. Substituições já consumadas viram comentário; salva sempre
+- [licença] **Mudança de licença: comercial proprietária → open-source MIT.** `LICENSE` reescrita como MIT; README e rodapé da apresentação (`Apresentacao-Metodo-Norte.pptx`, slides 8 e 11) atualizados para v1.3.0 + MIT via `tools/atualizar-apresentacao.py`. Autoria de Kasuo preservada no copyright — a pedido de Kasuo
+- [novo] **Disciplina de verificação** (inspirada no Fable Method, de Sahir619 — reescrita, com crédito): `regrasGerais` ganha "**Retry limitado**" (3 ciclos de verificação falha → parar e devolver, não ficar em loop); `testesQualidade` ganha "**Verificar por observação ≠ inferência**" (confirmar o "pronto" rodando/vendo, não deduzindo) + "**Gêmeos do defeito (TWINS)**" (ao corrigir bug, varrer o mesmo padrão em outros lugares) + 3 bloqueios novos — interno
+- [novo] Skill `metodo-norte` (MODO OPERAÇÃO): passo 4 ganha "**Define Done**" (declarar o critério de verificação antes de agir); passos 5–6 incorporam TWINS, retry 3x e verificação por observação — interno
+- [novo] **`CREDITOS.md`** na raiz + seção "Créditos" no `README.md`: reconhece contribuições externas (Fable Method / Sahir619) e a **coautoria de IA** no desenvolvimento do método. Regra de reconhecimento como princípio (crédito é parte da honestidade do método) — a pedido de Kasuo
 
 ## v1.2.0 — 2026-07-21
 

@@ -1,10 +1,33 @@
 # Método Norte — Starter Kit
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-
 > **Dê um norte à sua IA.**
 
 **Faça a IA desenvolver seus sistemas com consistência — sem alucinar tabelas, sem duplicar código, sem misturar projetos.**
+
+> ### 🆕 Novidades da v1.3.0 (2026-07)
+> - **Disciplina de verificação** — a IA passa a **provar** que terminou (verificação por observação, não por dedução), varre os **gêmeos de cada bug (TWINS)** e para depois de 3 tentativas em vez de entrar em loop. Inspirada no [Fable Method](https://github.com/Sahir619/fable-method) (crédito em [CREDITOS.md](CREDITOS.md)).
+> - **Agora é open-source** sob **Licença [MIT](LICENSE)**.
+> - **Apresentação** do método (12 slides) incluída e destacada abaixo.
+>
+> Detalhes completos no [CHANGELOG](CHANGELOG.md).
+
+---
+
+## 📊 Apresentação
+
+Uma visão geral do método em 12 slides — o problema, a solução, os 8 pilares, os relatórios que a IA devolve e como implantar.
+
+[![Apresentação do Método Norte](docs/img/capa.png)](Apresentacao-Metodo-Norte.pptx)
+
+**➡️ [Baixar a apresentação completa (PPTX)](Apresentacao-Metodo-Norte.pptx)**
+
+> 💡 O GitHub não pré-visualiza `.pptx` — clique na capa ou no link para baixar e abrir no PowerPoint / Google Slides / LibreOffice.
+
+Um dos slides — os relatórios que tornam o trabalho da IA rastreável:
+
+![Slide: os relatórios que a IA devolve](docs/img/slide-relatorios.png)
+
+---
 
 ## O problema que este kit resolve
 
@@ -62,38 +85,17 @@ Método extraído de um caso real: um portal corporativo em produção (17+ mód
 
 ---
 
-## 🧪 Testou? Conta pra gente (leva ~3 min)
+## Créditos
 
-Este método nasceu numa stack só (portal corporativo, Node + MSSQL). **O feedback de quem testa em
-outras stacks é o que mais o melhora** — inclusive as travadas e o que ficou confuso. Escolha o canal:
-
-| Você quer... | Vá para |
-|--------------|---------|
-| 🐛 Reportar um bug ou atrito | [Nova issue → Bug ou atrito](../../issues/new?template=1-bug-atrito.yml) |
-| 💡 Sugerir uma melhoria | [Nova issue → Sugestão](../../issues/new?template=2-sugestao.yml) |
-| 🧪 Contar como foi seu teste | [Nova issue → Testei, conta como foi](../../issues/new?template=3-testei-como-foi.yml) |
-| 🌟 Mostrar um caso de sucesso | [Discussions → Show and tell](../../discussions/categories/show-and-tell) |
-| ❓ Pedir ajuda pra implantar | [Discussions → Q&A](../../discussions/categories/q-a) |
-| 💬 Conversar / ideias abertas | [Discussions](../../discussions) |
-
-**As [Discussions](../../discussions) são o fórum da comunidade** — passe por lá mesmo que só pra dizer oi.
-
-## Contribuindo
-
-Pull requests são bem-vindos. Toda contribuição é creditada; a esteira de versionamento está no
-[CHANGELOG.md](CHANGELOG.md).
+O método reconhece as ideias externas que adota e a coautoria de IA no seu desenvolvimento — ver [CREDITOS.md](CREDITOS.md). Destaque: as disciplinas de **verificação por observação**, **gêmeos do defeito (TWINS)** e **retry limitado** foram inspiradas no **Fable Method**, de **Sahir619** (github.com/Sahir619/fable-method), reescritas na linguagem do Método Norte. Crédito e agradecimento ao autor.
 
 ---
 
 ## Autor
 
 **Kasuo** — Arquiteto de Soluções com IA, criador do Método Norte.
-Método extraído e refinado em produção real (portal corporativo com 17+ módulos e ~100 tabelas,
-desenvolvido e mantido com IA usando exatamente esta estrutura).
-
-Se o Método Norte te ajudou, deixar uma ⭐ no repositório é o maior reconhecimento — e ajuda outras
-pessoas a encontrá-lo.
+Método extraído e refinado em produção real; contato para licenciamento, implantação e parcerias: kasuo.wkl@gmail.com
 
 ---
 
-*Método Norte — © Kasuo · Licença: **MIT** (uso livre com atribuição) — ver [LICENSE](LICENSE)*
+*Método Norte v1.3.0 — 2026-07 · © Kasuo · Open-source sob Licença MIT — ver [LICENSE](LICENSE)*

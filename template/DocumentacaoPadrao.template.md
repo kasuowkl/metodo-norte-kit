@@ -153,6 +153,7 @@ Após identificar o sistema, localize o tipo de solicitação.
 11. **Decisão de arquitetura vira ADR** — em [decisoes/](decisoes/LEIA-ME.md), curto: contexto → decisão → consequências
 12. **Segurança é bloqueante** — tarefa que toca senha/segredo/exposição segue [modulos/seguranca.md](modulos/seguranca.template.md)
 13. **Ao mexer na doc, rodar o validador** — `node tools/validar-doc.js`; não commitar com erro
+14. **Reconhecimento e crédito** — ideia/padrão/disciplina vinda de fora (projeto open-source, autor, outra equipe) é **creditada** no ADR que a adota e num rodapé onde a regra vive; reescreva a ideia na sua linguagem (não copie texto sob licença alheia). Vale também para **coautoria de IA**. Contribuições externas e coautoria ficam em [CREDITOS.md](CREDITOS.template.md)
 
 > 📝 A #0 é opcional (ritual de abertura); as demais são o núcleo do método — recomendamos manter todas. Adicione as suas depois delas.
 
@@ -177,6 +178,7 @@ Se arquivo obrigatório estiver ausente ou contraditório, **avisar antes de pro
 ├── CLAUDE.md                    ← entrada para a IA nos projetos
 ├── DocumentacaoPadrao.md        ← VOCÊ ESTÁ AQUI (hub)
 ├── ESTADO-ATUAL.md              ← status vivo + pendências (curto)
+├── CREDITOS.md                  ← contribuições externas + coautoria de IA (Regra #14)
 ├── SINCRONIZACAO.md             ← carimbo de sync entre ambientes (se aplicável)
 ├── COMO-USAR.md
 ├── modulos/                     ← regras por assunto (inclui sincronizarAmbientes, se aplicável)

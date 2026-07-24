@@ -35,8 +35,9 @@ Antes de **qualquer** criação, alteração, correção, análise ou remoção 
 3. **Identifique a tarefa** no Índice por Assunto e leia **apenas** os arquivos indicados (não leia tudo)
 4. **Confirme o plano** antes de executar, neste formato:
    - Sistema identificado (+ ambiente) · Tipo de tarefa · Arquivos lidos · Área impactada · Risco principal · Ação planejada
-5. **Execute** respeitando as Regras de Ouro do hub — em especial: não inventar tabelas/rotas/pastas (verificar o código real), usar os componentes do catálogo de padrões em vez de criar novos, segredos só no `.env`
-6. **Ao concluir:** entrada curta no topo de `progresso/AAAA-MM.md` do mês corrente + atualizar `ESTADO-ATUAL.md` se status/pendências mudaram + se mexeu na doc, rodar `node tools/validar-doc.js` (não commitar com erro)
+   - **Define Done:** declare em 1–2 frases o que é "concluído" **e como será verificado** (qual comando/tela/valor prova). Sem critério de verificação, não comece.
+5. **Execute** respeitando as Regras de Ouro do hub — em especial: não inventar tabelas/rotas/pastas (verificar o código real), usar os componentes do catálogo de padrões em vez de criar novos, segredos só no `.env`. Se corrigir um bug, **procure os gêmeos** (mesmo padrão em outros lugares — linha `TWINS:`). Se a verificação falhar **3 vezes**, pare e devolva o estado (não fique em loop).
+6. **Verifique por observação** (não por inferência): confirme o "Define Done" **rodando/vendo** o resultado, não deduzindo. Só então, **ao concluir:** entrada curta no topo de `progresso/AAAA-MM.md` do mês corrente + atualizar `ESTADO-ATUAL.md` se status/pendências mudaram + se mexeu na doc, rodar `node tools/validar-doc.js` (não commitar com erro)
 7. Decisão de arquitetura estável tomada durante a tarefa → criar ADR curto em `decisoes/` (contexto → decisão → consequências)
 
 Se um arquivo obrigatório estiver ausente ou contraditório, **avise antes de prosseguir**.

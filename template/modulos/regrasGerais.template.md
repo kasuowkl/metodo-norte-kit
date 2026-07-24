@@ -54,3 +54,7 @@ ultima_revisao: AAAA-MM-DD
 2. Verificar arquivos reais nas pastas antes de citar/alterar
 3. Validar impacto em autenticação, permissão, banco e integrações
 4. Priorizar o padrão real do código sobre arquitetura conceitual
+
+## Retry limitado — não insistir em loop
+
+Ao tentar concluir/consertar algo, se a **verificação falhar 3 vezes seguidas** (ou houver bloqueio externo: falta de credencial, serviço fora, decisão que só o usuário toma), **PARE e devolva ao usuário** o estado: o que tentou, o que falhou e a hipótese. Não fique em loop tentando variações da mesma correção — três ciclos sem sucesso significam que falta contexto ou decisão, não mais uma tentativa. Distinguir: erro **mecânico** → corrigir e re-verificar; **contradição/surpresa** (o código diz uma coisa, o esperado diz outra) → parar e expor, a contradição é o achado. *(Disciplina inspirada no Fable Method — ver [CREDITOS.md](../CREDITOS.template.md).)*

@@ -50,7 +50,7 @@ específico de ambiente e mande pro **`.env` local** (que nunca é versionado). 
 `.env.example` ficam **genéricos e idênticos** nos dois lados — apontando pra variáveis (`DEPLOY_HOST`,
 `PORTA_APP`, `DB_SERVER`, `PM2_NAME`…) em vez de valores.
 
-> 📝 No `CLAUDE.md`/`.env.example`, troque `10.0.0.10` por "`DEPLOY_HOST` do `.env`", `porta 3000` por
+> 📝 No `CLAUDE.md`/`.env.example`, troque `192.168.0.80` por "`DEPLOY_HOST` do `.env`", `porta 3132` por
 > "`PORTA_APP`", a senha de deploy por "ler do `.env`", e assim por diante. O `.env` real de cada ambiente
 > preenche os valores; ele fica só no servidor/máquina, no `.gitignore`.
 
