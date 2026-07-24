@@ -4,6 +4,24 @@
 
 **Faça a IA desenvolver seus sistemas com consistência — sem alucinar tabelas, sem duplicar código, sem misturar projetos.**
 
+---
+
+## 📊 Apresentação
+
+Uma visão geral do método em 12 slides — o problema, a solução, os 8 pilares, os relatórios que a IA devolve e como implantar.
+
+[![Apresentação do Método Norte](docs/img/capa.png)](Apresentacao-Metodo-Norte.pptx)
+
+**➡️ [Baixar a apresentação completa (PPTX)](Apresentacao-Metodo-Norte.pptx)**
+
+> 💡 O GitHub não pré-visualiza `.pptx` — clique na capa ou no link para baixar e abrir no PowerPoint / Google Slides / LibreOffice.
+
+Um dos slides — os relatórios que tornam o trabalho da IA rastreável:
+
+![Slide: os relatórios que a IA devolve](docs/img/slide-relatorios.png)
+
+---
+
 ## O problema que este kit resolve
 
 Equipes que usam IA (Claude, Copilot, Cursor…) para desenvolver sistemas enfrentam sempre os mesmos sintomas: a IA inventa tabelas e rotas que não existem, reinventa componentes que o projeto já tem, mistura convenções de projetos diferentes, "esquece" decisões de arquitetura tomadas semanas atrás e refaz do jeito dela, e ninguém sabe dizer o que já foi feito e o que falta.

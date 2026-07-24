@@ -25,16 +25,18 @@ ARQ = "Apresentacao-Metodo-Norte.pptx"
 # (antigo, novo) — casam contra o texto COMPLETO do parágrafo, substituindo run a run.
 # Usa-se travessão "–" ou "—"? A apresentação usa o separador "·" no rodapé — copiar EXATO.
 SUBSTITUICOES = [
-    # Rodapé (slide 11) — versão v1.3.0 + mudança de licença: proprietária -> MIT open-source
+    # Frase final (slide 11) — "passa a ser confiável" dava a impressão de que hoje não é;
+    # "ainda mais confiável" soma à velocidade em vez de só consertar (tom positivo)
     (
-        "Método Norte v1.1 · © 2026 Kasuo · Todos os direitos reservados",
-        "Método Norte v1.3.0 · © 2026 Kasuo · Open-source (Licença MIT)",
+        "A IA já é rápida. Com o Método Norte, ela passa a ser confiável.",
+        "A IA já é rápida. Com o Método Norte, ela fica ainda mais confiável.",
     ),
-    # Slide 8 — cartão de licença: refletir MIT + créditos no lugar de "licença de uso"
-    (
-        "Licença de uso claro, formulário de feedback e processo de melhoria contínua",
-        "Open-source sob Licença MIT, com créditos a ideias externas adotadas e processo de melhoria contínua",
-    ),
+    # --- Já aplicadas em releases anteriores (mantidas como registro; comentadas p/ não
+    #     travar o save quando o texto novo já está no .pptx). Reative se recriar o .pptx: ---
+    # ("Método Norte v1.1 · © 2026 Kasuo · Todos os direitos reservados",
+    #  "Método Norte v1.3.0 · © 2026 Kasuo · Open-source (Licença MIT)"),
+    # ("Licença de uso claro, formulário de feedback e processo de melhoria contínua",
+    #  "Open-source sob Licença MIT, com créditos a ideias externas adotadas e processo de melhoria contínua"),
 ]
 
 

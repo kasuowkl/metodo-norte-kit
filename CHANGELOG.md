@@ -13,6 +13,8 @@ Versionamento: correção = 1.0.x · template ou seção nova = 1.x.0 · mudanç
 
 ## v1.3.0 — 2026-07-24
 
+- [apresentação] **Slide novo "Os relatórios que a IA devolve"** (slide 6): ESTADO-ATUAL, progresso mensal, plano-antes-de-agir e verificação provada (TWINS) — mostra a rastreabilidade do método. Frase final ajustada ("ela fica ainda mais confiável", tom positivo). Capa + slide destacados no README como imagens (`docs/img/`). `tools/adicionar-slide-relatorios.py` gera o slide no padrão visual
+- [fix] `tools/atualizar-apresentacao.py`: o `sys.exit(1)` de "texto não encontrado" abortava **antes** do `prs.save()` — quando uma substituição já estava aplicada (release anterior), o arquivo não era salvo. Substituições já consumadas viram comentário; salva sempre
 - [licença] **Mudança de licença: comercial proprietária → open-source MIT.** `LICENSE.md` reescrita como MIT; README e rodapé da apresentação (`Apresentacao-Metodo-Norte.pptx`, slides 8 e 11) atualizados para v1.3.0 + MIT via `tools/atualizar-apresentacao.py`. Autoria de Kasuo preservada no copyright — a pedido de Kasuo
 - [novo] **Disciplina de verificação** (inspirada no Fable Method, de Sahir619 — reescrita, com crédito): `regrasGerais` ganha "**Retry limitado**" (3 ciclos de verificação falha → parar e devolver, não ficar em loop); `testesQualidade` ganha "**Verificar por observação ≠ inferência**" (confirmar o "pronto" rodando/vendo, não deduzindo) + "**Gêmeos do defeito (TWINS)**" (ao corrigir bug, varrer o mesmo padrão em outros lugares) + 3 bloqueios novos — interno
 - [novo] Skill `metodo-norte` (MODO OPERAÇÃO): passo 4 ganha "**Define Done**" (declarar o critério de verificação antes de agir); passos 5–6 incorporam TWINS, retry 3x e verificação por observação — interno
