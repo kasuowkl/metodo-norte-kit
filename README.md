@@ -4,6 +4,14 @@
 
 **Faça a IA desenvolver seus sistemas com consistência — sem alucinar tabelas, sem duplicar código, sem misturar projetos.**
 
+> ### 🆕 Novidades da v1.4.0 (2026-08)
+> - **Definition of Ready** — checklist de "antes de começar" (par do Definition of Done): trava a alucinação na **entrada** (confirmar antes de assumir), como o Done trava na **saída** (observar antes de afirmar).
+> - **Regras de Ouro com selo ⚠️ ANTI-ALUCINAÇÃO** — as regras que mais evitam que a IA invente ou assuma coisas agora saltam aos olhos, com índice e agrupamento por tema.
+> - **Dois módulos novos:** `criarAlterar` (molde de rota + anti-padrões + checklist) e `manutencao` (deprecar, código morto, remover dados com segurança, changelog).
+> - **"Sandbox não substitui uso real"** + **Mapa rápido de 1 página** no COMO-USAR.
+>
+> Detalhes completos no [CHANGELOG](CHANGELOG.md). Antes: v1.3.0 trouxe a disciplina de verificação (observação, TWINS, retry limitado — inspirada no [Fable Method](https://github.com/Sahir619/fable-method)) e a licença **[MIT](LICENSE)**.
+
 ---
 
 ## 📊 Apresentação

@@ -1,0 +1,56 @@
+name: "🧪 Testei — conta como foi"
+description: "Você implantou/testou o método? Conte a experiência (bom ou ruim). Leva ~3 min."
+title: "[teste] "
+labels: ["feedback", "relato"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Você testou **sem ajuda do autor** — é exatamente esse o teste. Obrigado! Responda o que quiser; nada é obrigatório além do primeiro campo.
+        Se foi um caso de **sucesso** que você quer mostrar, considere postar também em **[Show and tell](../../discussions/categories/show-and-tell)**.
+  - type: textarea
+    id: resumo
+    attributes:
+      label: Resumo — funcionou pra você?
+      description: Em poucas linhas, como foi. A IA parou de inventar tabela/rota? Alucinou menos? Valeu a pena?
+      placeholder: "Ex.: implantei em 1h30, a IA passou a confirmar o plano antes de agir e parou de sugerir libs que não uso..."
+    validations:
+      required: true
+  - type: dropdown
+    id: ia
+    attributes:
+      label: Qual IA?
+      options:
+        - Claude Code
+        - Cursor
+        - GitHub Copilot
+        - Outra
+  - type: input
+    id: stack
+    attributes:
+      label: Sua stack
+      placeholder: "Ex.: Node + PostgreSQL / Python / .NET"
+  - type: input
+    id: equipe
+    attributes:
+      label: Tamanho da equipe / nº de sistemas documentados
+      placeholder: "Ex.: 3 devs, 2 sistemas"
+  - type: dropdown
+    id: setup
+    attributes:
+      label: Como implantou?
+      options:
+        - Prompt de setup do INSTALACAO.md (a IA preencheu)
+        - Manual
+        - Misto
+  - type: textarea
+    id: travou
+    attributes:
+      label: Onde travou ou confundiu? (o mais valioso)
+      description: Liste TODAS as travadas, mesmo pequenas — arquivo/passo, o que aconteceu.
+      placeholder: "Ex.: a instrução 📝 do módulo X ficou ambígua sobre..."
+  - type: input
+    id: nota
+    attributes:
+      label: Nota geral (0–10) e a UMA coisa que mais precisa melhorar
+      placeholder: "Ex.: 8 — faltou um exemplo pronto pra minha stack"

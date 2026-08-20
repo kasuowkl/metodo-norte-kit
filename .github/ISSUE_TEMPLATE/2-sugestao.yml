@@ -1,0 +1,23 @@
+name: "💡 Sugestão de melhoria"
+description: "Ideia de novo módulo, template, ajuste no fluxo ou qualquer coisa que deixaria o método melhor."
+title: "[ideia] "
+labels: ["enhancement", "feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ideias movem o método. Se for algo mais aberto p/ discutir, considere as **[Discussions](../../discussions)** em vez de uma issue.
+  - type: textarea
+    id: sugestao
+    attributes:
+      label: Sua sugestão
+      description: O que você mudaria ou adicionaria? Por quê? Que problema isso resolve?
+      placeholder: "Ex.: um módulo específico para monorepos, porque hoje o catálogo assume 1 repo por sistema..."
+    validations:
+      required: true
+  - type: input
+    id: contexto
+    attributes:
+      label: Contexto (opcional)
+      description: Sua stack / IA / tipo de projeto — ajuda a entender de onde vem a ideia.
+      placeholder: "Ex.: equipe de 4 devs, Go + gRPC, usando Cursor"
