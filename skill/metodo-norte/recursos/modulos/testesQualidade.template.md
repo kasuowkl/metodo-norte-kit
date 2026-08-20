@@ -13,6 +13,29 @@ ultima_revisao: AAAA-MM-DD
 
 **Validação manual não escala com IA.** A IA produz código rápido demais para o QA humano acompanhar — todo código novo vem com teste automatizado sempre que viável, senão regressão silenciosa é questão de tempo.
 
+## Definition of Ready — antes de começar
+
+**Não escrever código sem estes 4 confirmados.** O "pronto pra começar" é o par do "pronto pra
+entregar": *Ready trava a alucinação na ENTRADA (confirmar antes de assumir); Done trava na SAÍDA
+(observar antes de afirmar).*
+
+1. **Sistema + ambiente confirmados.** Sei em qual sistema mexo; se houver ambientes espelhados
+   (produção/homolog, etc.), sei em qual estou **pela config local** (`.env`), não pelo git remote
+   (que engana) — ver Regra de Ouro **#0b ⚠️ ANTI-ALUCINAÇÃO**. Ambiente errado = mexer no lugar errado.
+2. **Escopo e desenho confirmados.** Se o usuário **não** especificou o *como* (quais telas, campos,
+   comportamento), apresentei minha leitura e **esperei confirmação** antes de codar — acertar o *o quê*
+   não dá o direito de decidir o *como*. Investigar para reduzir ambiguidade é esperado; decidir sozinho
+   o desenho, não.
+3. **Critério de "pronto" declarado.** Antes de agir, disse em 1–2 frases **o que é concluído E como
+   será verificado** (qual comando roda, qual tela abre, qual valor deve aparecer). Sem critério de
+   verificação declarado, **não começo** (Define Done — ver seção abaixo).
+4. **Contexto lido — código real, não suposição.** Localizei os arquivos reais e li os módulos que o
+   índice do hub manda — **não invento em cima de suposição** (Regras de Ouro **⚠️ ANTI-ALUCINAÇÃO**
+   "não inventar" / "priorizar código real").
+
+> Se algum destes não está claro, **perguntar antes** — não assumir. Um "Ready" incompleto é a origem
+> mais comum de retrabalho e de código construído sobre premissa errada.
+
 ## Verificar por observação, nunca por inferência
 
 **"Pronto" só vale se foi observado — não deduzido.** Antes de considerar uma tarefa concluída:
@@ -32,6 +55,23 @@ TWINS: procurei <padrão/trecho> — achei <N> outros lugares: <lista de arquivo
 ```
 
 Se achar gêmeos, corrija todos (ou registre por que ficaram de fora). Corrigir 1 de 5 ocorrências e reportar "resolvido" é falso-concluído.
+
+## Sandbox sintético NÃO substitui uso real
+
+Bateria verde **não** é prova de que funciona. O sandbox é montado com os dados que a **IA imaginou** —
+por isso ele nunca contém o caso que a IA não previu. Quando o usuário usa de verdade, aparece o que
+teste nenhum acharia (um arquivo com quebra de linha diferente, uma tela sem link, um acúmulo de
+subpixel que só se vê lá pela linha 1.500).
+
+**Como aplicar:**
+- Ao reportar, dizer **explicitamente o que NÃO foi exercitado pela interface**. "Testado na camada de
+  serviço, não pela tela" é uma frase honesta e necessária.
+- Nunca afirmar "está funcionando" apoiado só na bateria. Um boot que passa prova o `CREATE`, não o
+  fluxo real.
+- Depois que o usuário encontrar um defeito no uso real, **escrever o teste que faltava** — ele vira
+  caso permanente na suíte.
+
+*(Complementa "Verificar por observação" acima.)*
 
 ## Padrão de teste automatizado
 

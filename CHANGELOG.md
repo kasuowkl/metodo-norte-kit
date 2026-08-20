@@ -11,6 +11,18 @@ Versionamento: correção = 1.0.x · template ou seção nova = 1.x.0 · mudanç
 
 ---
 
+## v1.4.0 — 2026-08-20
+
+Melhorias promovidas da documentação real (Documentação Padrão do Kasuo) após uso intensivo — generalizadas para o template público.
+
+- [template novo] **`modulos/criarAlterar.template.md`** — o módulo mais usado (criar/alterar): molde de rota CRUD, padrão de resposta/erro único, anti-padrões (SQL concatenado, duplicar componente, catch que engole erro) e checklist "antes de dar por pronto". — interno
+- [template novo] **`modulos/manutencao.template.md`** — o "outro lado" do ciclo de vida: deprecar/aposentar (soft-first), código morto e dívida técnica, remoção segura de dados (backup antes de DROP, confirmar e reler), changelog/semver por sistema. — interno
+- [seção] **testesQualidade: "Definition of Ready"** (par do Definition of Done) — 4 checagens antes de codar (sistema+ambiente, escopo confirmado, critério de "pronto" declarado, código real lido). *Ready trava a alucinação na ENTRADA; Done na SAÍDA.* — interno
+- [seção] **testesQualidade: "Sandbox sintético NÃO substitui uso real"** — bateria verde não prova que funciona; o sandbox só tem os casos que a IA imaginou. Dizer o que NÃO foi exercitado pela tela. — interno
+- [hub] **Regras de Ouro reorganizadas** (sem cortar conteúdo): índice das regras no topo, agrupadas por tema, selo **⚠️ ANTI-ALUCINAÇÃO** nas regras que mais evitam invenção (#0b/#2/#3). Reforça o cerne do método. — interno
+- [doc] **COMO-USAR: "🗺️ Mapa rápido (1 página)"** — o que é cada pasta, fluxo típico do pedido à entrega, atalhos por intenção e os inegociáveis. Onboarding do método num relance. — interno
+- Espelho `skill/metodo-norte/recursos/` sincronizado com `template/`. Validador: 0 erros / 0 avisos.
+
 ## v1.3.0 — 2026-07-24
 
 - [apresentação] **Slide novo "Os relatórios que a IA devolve"** (slide 6): ESTADO-ATUAL, progresso mensal, plano-antes-de-agir e verificação provada (TWINS) — mostra a rastreabilidade do método. Frase final ajustada ("ela fica ainda mais confiável", tom positivo). Capa + slide destacados no README como imagens (`docs/img/`). `tools/adicionar-slide-relatorios.py` gera o slide no padrão visual

@@ -97,6 +97,8 @@ Após identificar o sistema, localize o tipo de solicitação.
 |----------------------|-----------------|
 | **Qualquer tarefa no sistema principal** | [modulos/regrasGerais.md](modulos/regrasGerais.template.md) |
 | Criar sistema novo do zero | [modulos/stackPadrao.md](modulos/stackPadrao.template.md) |
+| Criar ou alterar módulo/feature | [modulos/criarAlterar.md](modulos/criarAlterar.template.md) |
+| Deprecar / remover / limpar código morto / apagar dados / changelog | [modulos/manutencao.md](modulos/manutencao.template.md) |
 | Banco, tabelas, migrations, queries | [modulos/bancoDeDados.md](modulos/bancoDeDados.template.md) |
 | Serviço, integração, API externa, webhook, cron | [modulos/servicosIntegracoes.md](modulos/servicosIntegracoes.template.md) |
 | Login, permissões, perfis | [modulos/permissoesAutenticacao.md](modulos/permissoesAutenticacao.template.md) |
@@ -115,6 +117,32 @@ Após identificar o sistema, localize o tipo de solicitação.
 
 ## Passo 3 – Regras de ouro
 
+> **As regras são curtas mas densas — ler inteiras, não resumir.** Cada uma existe para **impedir
+> alucinação** e retrabalho. As marcadas **⚠️ ANTI-ALUCINAÇÃO** são as que mais evitam que a IA invente
+> ou assuma coisas — atenção redobrada nelas. O índice abaixo é só um mapa para achar rápido.
+
+### 📑 Índice das regras
+
+| # | Regra | Grupo |
+|---|-------|-------|
+| 0 | Ler o estado ao iniciar + reportar pendências | 🚀 Abertura |
+| 0b | Saber em QUAL ambiente está **⚠️** | 🚀 Abertura |
+| 0c | Sincronizar via git, perguntando | 🚀 Abertura |
+| 1 | Sistema novo = stack padrão | 🔨 Construção |
+| 2 | Não inventar tabelas/colunas/rotas **⚠️** | 🔨 Construção |
+| 3 | Priorizar código real sobre conceito **⚠️** | 🔨 Construção |
+| 4 | Carregar só o necessário | 🔨 Construção |
+| 5 | Em conflito: hub → módulo → ficha | 🔨 Construção |
+| 6 | Atualizar a doc quando desatualizar | 🔨 Construção |
+| 7 | Usar os PADRÕES existentes (não duplicar) | 🔨 Construção |
+| 8 | Config crítica só no `.env` | 🔐 Segurança & Config |
+| 9 | Registrar no Progresso | 📝 Registro |
+| 10 | Números têm UMA fonte | 📝 Registro |
+| 11 | Decisão de arquitetura vira ADR | 📝 Registro |
+| 12 | Segurança é bloqueante | 🔐 Segurança & Config |
+| 13 | Ao mexer na doc, rodar o validador | 🧠 Método |
+| 14 | Reconhecimento e crédito | 🧠 Método |
+
 > 📝 **RITUAL DE ABERTURA (Regra #0) — opcional, mas é o que faz a IA "chegar sabendo".**
 > As três sub-regras abaixo transformam esta documentação de "arquivo que a IA consulta quando
 > lembra" em "arquivo que a IA lê **toda sessão, antes de agir**, e do qual ela te **devolve um
@@ -131,7 +159,7 @@ Após identificar o sistema, localize o tipo de solicitação.
    começo de cada sessão. *(Se a doc mora num repositório git, atualizá-la antes de ler — ver #0c —
    para não reportar uma lista velha.)*
    > 📝 Adapte: se você não usa `ESTADO-ATUAL.md`/`progresso/`, aponte para onde suas pendências vivem.
-   0b. **[Se há ambientes espelhados] Saber em QUAL ambiente está antes de agir.** Mesmo código, mas
+   0b. **⚠️ ANTI-ALUCINAÇÃO — [Se há ambientes espelhados] Saber em QUAL ambiente está antes de agir.** Mesmo código, mas
        repositórios/servidores/bancos diferentes. Ao iniciar, identificar o ambiente; se não estiver
        claro pelo contexto, **PERGUNTAR antes de qualquer ação** (deploy, banco, `.env`, commit) —
        nunca assumir. As pendências a reportar (#0) são **as do ambiente atual**.
@@ -141,8 +169,8 @@ Após identificar o sistema, localize o tipo de solicitação.
        de algo relevante, verificar trabalho **não-enviado** e **perguntar** se quer commitar+push.
        Detalhes: [modulos/sincronizarAmbientes.md](modulos/sincronizarAmbientes.template.md).
 1. **Sistema novo = stack padrão** — sem exceção, salvo pedido explícito
-2. **Não inventar** tabelas, colunas, rotas, serviços ou pastas — na dúvida, verificar o código real
-3. **Priorizar código real** sobre arquitetura conceitual
+2. **⚠️ ANTI-ALUCINAÇÃO — Não inventar** tabelas, colunas, rotas, serviços ou pastas — na dúvida, verificar o código real
+3. **⚠️ ANTI-ALUCINAÇÃO — Priorizar código real** sobre arquitetura conceitual
 4. **Carregar só o necessário** — não ler todos os `.md` de uma vez
 5. **Em conflito**, seguir: este hub → módulo específico → ficha do sistema
 6. **Atualizar a documentação** quando alteração estrutural tornar um `.md` desatualizado

@@ -7,6 +7,62 @@ ultima_revisao: AAAA-MM-DD
 
 # Como usar esta documentação
 
+> O hub [DocumentacaoPadrao.md](DocumentacaoPadrao.template.md) é a referência completa. Esta página é
+> o **mapa de 1 tela** para se orientar rápido — "por onde começo?".
+
+---
+
+## 🗺️ Mapa rápido (1 página)
+
+### O que é cada pasta
+
+| Pasta / arquivo | Para que serve | Quando abrir |
+|-----------------|----------------|--------------|
+| **DocumentacaoPadrao.md** | Hub: regras de ouro + índice por assunto | **Sempre, primeiro** |
+| **ESTADO-ATUAL.md** | Onde o projeto está + pendências | Ao iniciar a sessão |
+| **progresso/** | Diário do que foi feito (por mês) | Ao iniciar + ao encerrar (registrar) |
+| **modulos/** | Regras por assunto (criar, alterar, manter, banco, segurança…) | O índice do hub diz qual ler |
+| **decisoes/** (ADRs) | **Por que** é assim (decisão + porquê) | "Por que fizeram desse jeito?" |
+| **referencia/** | Catálogo, padrões, números (fonte única) | Contagens, componentes repetíveis |
+| **sistemas/** | Ficha de cada sistema | Detalhe de um sistema específico |
+| **tools/** | `validar-doc.js` | Ao mexer na doc (regra do validador) |
+
+### Fluxo típico (do pedido à entrega)
+
+```
+1. Ler o hub + ESTADO-ATUAL + progresso do mês         (abertura de sessão — Regra #0)
+2. Identificar SISTEMA (+ ambiente, se houver espelhados)   ⚠️ não assumir (Regra #0b)
+3. Definition of Ready: escopo/desenho confirmado + critério de "pronto" declarado
+4. O Índice por Assunto do hub manda os módulos a ler   (carregar só o necessário)
+5. Construir seguindo os padrões e o código real         (não inventar — Regras #2/#3)
+6. Definition of Done: verificar POR OBSERVAÇÃO (rodou/viu), procurar TWINS do bug
+7. Registrar no progresso/ + ESTADO-ATUAL + rodar validador
+```
+
+### Atalhos por intenção
+
+| Situação | Vá direto para |
+|----------|----------------|
+| **IA numa sessão nova** | Ritual de abertura no topo do hub |
+| **Criar sistema do zero** | modulos/stackPadrao.md |
+| **Criar/alterar módulo** | modulos/criarAlterar.md |
+| **Deprecar / remover / limpar** | modulos/manutencao.md |
+| **Mexer em banco/tabelas** | modulos/bancoDeDados.md |
+| **Toquei em senha/segredo** | modulos/seguranca.md (bloqueante) |
+| **Entender uma decisão** | decisoes/ (ADRs) |
+
+### Os inegociáveis (nunca pular)
+
+O mínimo vital — o resto está nas Regras de Ouro (ler **inteiras**):
+
+1. **⚠️ Ambiente pela config local, não pelo git remote** (se há espelhados) — Regra #0b.
+2. **⚠️ Não inventar** tabela/coluna/rota; priorizar **código real** — Regras #2/#3.
+3. **Config crítica (senha/IP) só no `.env`** — nunca no código/doc.
+4. **Verificar por observação** — "pronto" só se rodou/viu, nunca deduzido.
+5. **Registrar no progresso** ao terminar + rodar o validador ao mexer na doc.
+
+---
+
 ## Ativação nos projetos
 
 1. Cada projeto de código tem um `CLAUDE.md` (ou regra equivalente da sua IA) na raiz apontando para o hub `DocumentacaoPadrao.md` desta pasta
