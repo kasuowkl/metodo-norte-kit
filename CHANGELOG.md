@@ -11,6 +11,16 @@ Versionamento: correção = 1.0.x · template ou seção nova = 1.x.0 · mudanç
 
 ---
 
+## v1.5.0 — 2026-09-25
+
+Melhorias promovidas da Documentação Padrão do Kasuo depois da análise do ecossistema de IA de 24/09/2026 (arquivos grandes demais viravam "esquecimento" por truncamento).
+
+- [template novo] **`referencia/licoes-da-ia.template.md`** — uma página com as correções que valem para o futuro, lida em toda sessão. A memória automática das ferramentas fica presa a uma conta/máquina; esta página vale para todas as frentes. — interno
+- [template] **ESTADO-ATUAL curto de verdade** — `[x]` sai para `progresso/pendencias-fechadas.md`; pendência longa vira 1 linha + link para `progresso/pendencias-detalhe.md`. Medido: um ESTADO de 239 KB era lido em recorte e 109 de 176 pendências nunca chegavam à IA. — interno
+- [hub] **Regra #0 cita as lições** e traz a dica de hook: entregar só um **índice curto** — acima de ~10 mil caracteres a saída de um hook `SessionStart` do Claude Code não entra inteira no contexto. — interno
+- [validador] **ADR com número repetido = erro**; avisos de **tamanho** (ESTADO > 60 KB, hub > 70 KB, entrada de progresso > 3.000 caracteres) e de **`ultima_revisao` × último commit** (> 30 dias; só se a pasta for git). — interno
+- Espelho `skill/metodo-norte/recursos/` e `metodo-norte.skill` regerados pelo `tools/build.js`.
+
 ## v1.4.0 — 2026-08-20
 
 Melhorias promovidas da documentação real (Documentação Padrão do Kasuo) após uso intensivo — generalizadas para o template público.

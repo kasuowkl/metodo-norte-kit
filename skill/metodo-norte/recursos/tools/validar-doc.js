@@ -84,6 +84,52 @@ for (const arq of arquivos) {
   if (!hubTxt.includes(nome)) avisos.push(`[árvore do hub] ${nome} não aparece em ${HUB} (atualizar "Estrutura desta pasta")`);
 }
 
+// --- (v1.5.0) Número de ADR repetido: erro ---
+const porNumero = {};
+for (const arq of arquivos) {
+  const m = arq.match(/^decisoes\/(\d{3})-/);
+  if (m) (porNumero[m[1]] = porNumero[m[1]] || []).push(arq);
+}
+for (const [n, lista] of Object.entries(porNumero)) {
+  if (lista.length > 1) erros.push(`[ADR duplicada] número ${n} usado por: ${lista.join(', ')}`);
+}
+
+// --- (v1.5.0) Tamanho do que é lido em TODA sessão: aviso ---
+// Arquivo grande demais é lido em recorte, e o que fica fora do recorte a IA "esquece".
+const TETO_KB = { 'ESTADO-ATUAL.md': 60, 'DocumentacaoPadrao.md': 70 };
+for (const [arq, kb] of Object.entries(TETO_KB)) {
+  const p = path.join(RAIZ, arq);
+  if (!fs.existsSync(p)) continue;
+  const tam = Math.round(fs.statSync(p).size / 1024);
+  if (tam > kb) avisos.push(`[tamanho] ${arq} tem ${tam} KB (teto ${kb} KB) — mover itens fechados e detalhe para fora`);
+}
+for (const arqP of arquivos.filter(a => /^progresso\/\d{4}-\d{2}\.md$/.test(a))) {
+  const blocos = fs.readFileSync(path.join(RAIZ, arqP), 'utf8').split(/\n(?=### \d{4}-\d{2}-\d{2})/).slice(1);
+  const longas = blocos.filter(b => b.length > 3000).length;
+  if (longas) avisos.push(`[tamanho] ${arqP}: ${longas} entrada(s) com mais de 3.000 caracteres (formato pede ~10 linhas)`);
+}
+
+// --- (v1.5.0) ultima_revisao × último commit: aviso (só se a pasta for repositório git) ---
+try {
+  const { execSync } = require('child_process');
+  const log = execSync('git log --format=@%ad --date=short --name-only --relative', { cwd: RAIZ, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'], maxBuffer: 64 * 1024 * 1024 });
+  const ultimo = {};
+  let dataAtual = null;
+  for (const l of log.split('\n')) {
+    if (l.startsWith('@')) { dataAtual = l.slice(1); continue; }
+    const nome = l.trim().replace(/^"|"$/g, '');
+    if (nome && !(nome in ultimo)) ultimo[nome] = dataAtual;
+  }
+  for (const arq of arquivos) {
+    if (arq.startsWith('progresso/')) continue;
+    const m = fs.readFileSync(path.join(RAIZ, arq), 'utf8').match(/^ultima_revisao:\s*(\d{4}-\d{2}-\d{2})/m);
+    const c = ultimo[arq];
+    if (!m || !c) continue;
+    const dias = (new Date(c) - new Date(m[1])) / 86400000;
+    if (dias > 30) avisos.push(`[revisão] ${arq}: ultima_revisao ${m[1]}, último commit ${c} (${Math.round(dias)} dias depois) — conferir e atualizar a data`);
+  }
+} catch (e) { /* sem git: checagem pulada */ }
+
 // --- resultado ---
 console.log(`\nValidação da Documentação Padrão — ${arquivos.length} arquivos .md\n`);
 for (const e of erros) console.log('  ❌ ' + e);

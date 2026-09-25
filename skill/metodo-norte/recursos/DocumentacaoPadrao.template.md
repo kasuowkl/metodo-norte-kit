@@ -158,7 +158,11 @@ Após identificar o sistema, localize o tipo de solicitação.
    destaque), **sem esperar ele pedir**. É isso que faz "verificar o que falta" funcionar sozinho no
    começo de cada sessão. *(Se a doc mora num repositório git, atualizá-la antes de ler — ver #0c —
    para não reportar uma lista velha.)*
+   Ler também [referencia/licoes-da-ia.md](referencia/licoes-da-ia.template.md) — 1 página com o que já deu errado.
    > 📝 Adapte: se você não usa `ESTADO-ATUAL.md`/`progresso/`, aponte para onde suas pendências vivem.
+   > 💡 **Automatizar a abertura com hook (ex.: `SessionStart` do Claude Code):** entregue só um **índice
+   > curto** (contagens + títulos) e mande a IA ler os arquivos. Medido: acima de ~10 mil caracteres a
+   > saída do hook **não entra inteira** no contexto — vira arquivo e a IA recebe só uma prévia (v1.5.0).
    0b. **⚠️ ANTI-ALUCINAÇÃO — [Se há ambientes espelhados] Saber em QUAL ambiente está antes de agir.** Mesmo código, mas
        repositórios/servidores/bancos diferentes. Ao iniciar, identificar o ambiente; se não estiver
        claro pelo contexto, **PERGUNTAR antes de qualquer ação** (deploy, banco, `.env`, commit) —
@@ -211,7 +215,7 @@ Se arquivo obrigatório estiver ausente ou contraditório, **avisar antes de pro
 ├── COMO-USAR.md
 ├── modulos/                     ← regras por assunto (inclui sincronizarAmbientes, se aplicável)
 ├── sistemas/                    ← uma ficha por sistema (modelo: ficha-sistema.md)
-├── referencia/                  ← catálogos (implementações, padrões)
+├── referencia/                  ← catálogos (implementações, padrões) + licoes-da-ia.md
 ├── progresso/                   ← histórico fatiado por mês
 ├── decisoes/                    ← ADRs
 ├── templates/                   ← esqueletos de código (opcional)

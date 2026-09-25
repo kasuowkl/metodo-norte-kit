@@ -4,7 +4,10 @@
 
 **Faça a IA desenvolver seus sistemas com consistência — sem alucinar tabelas, sem duplicar código, sem misturar projetos.**
 
-> ### 🆕 Novidades da v1.4.0 (2026-08)
+> ### 🆕 Novidades da v1.5.0 (2026-09)
+> - **Lições da IA** numa página lida em toda sessão · **ESTADO-ATUAL curto** (fechadas e detalhe saem do arquivo) · dica de **hook com índice curto** (limite de ~10 mil caracteres) · **validador** com ADR duplicada, tamanho e data de revisão. Ver [CHANGELOG](CHANGELOG.md).
+>
+> ### Novidades da v1.4.0 (2026-08)
 > - **Definition of Ready** — checklist de "antes de começar" (par do Definition of Done): trava a alucinação na **entrada** (confirmar antes de assumir), como o Done trava na **saída** (observar antes de afirmar).
 > - **Regras de Ouro com selo ⚠️ ANTI-ALUCINAÇÃO** — as regras que mais evitam que a IA invente ou assuma coisas agora saltam aos olhos, com índice e agrupamento por tema.
 > - **Dois módulos novos:** `criarAlterar` (molde de rota + anti-padrões + checklist) e `manutencao` (deprecar, código morto, remover dados com segurança, changelog).
@@ -99,4 +102,4 @@ Método extraído e refinado em produção real; contato para licenciamento, imp
 
 ---
 
-*Método Norte v1.4.0 — 2026-08 · © Kasuo · Open-source sob Licença MIT — ver [LICENSE.md](LICENSE.md)*
+*Método Norte v1.5.0 — 2026-09 · © Kasuo · Open-source sob Licença MIT — ver [LICENSE.md](LICENSE.md)*
