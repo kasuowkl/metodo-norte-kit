@@ -95,8 +95,10 @@ Após identificar o sistema, localize o tipo de solicitação.
 
 | Se o usuário pedir... | Ler nesta ordem |
 |----------------------|-----------------|
+| **Desenvolver (sistema novo, versão grande, funcionalidade, correção, ideia)** | [modulos/cicloDesenvolvimento.md](modulos/cicloDesenvolvimento.template.md) — ler a Triagem e **só a seção da fase** |
+| **Tenho uma ideia / "vamos conversar"** | [modulos/cicloDesenvolvimento.md](modulos/cicloDesenvolvimento.template.md) (Fase 0, modo conversa) + [referencia/ideias.md](referencia/ideias.template.md) |
 | **Qualquer tarefa no sistema principal** | [modulos/regrasGerais.md](modulos/regrasGerais.template.md) |
-| Criar sistema novo do zero | [modulos/stackPadrao.md](modulos/stackPadrao.template.md) |
+| Criar sistema novo do zero | [modulos/cicloDesenvolvimento.md](modulos/cicloDesenvolvimento.template.md) + [modulos/stackPadrao.md](modulos/stackPadrao.template.md) |
 | Criar ou alterar módulo/feature | [modulos/criarAlterar.md](modulos/criarAlterar.template.md) |
 | Deprecar / remover / limpar código morto / apagar dados / changelog | [modulos/manutencao.md](modulos/manutencao.template.md) |
 | Banco, tabelas, migrations, queries | [modulos/bancoDeDados.md](modulos/bancoDeDados.template.md) |
@@ -213,9 +215,9 @@ Se arquivo obrigatório estiver ausente ou contraditório, **avisar antes de pro
 ├── CREDITOS.md                  ← contribuições externas + coautoria de IA (Regra #14)
 ├── SINCRONIZACAO.md             ← carimbo de sync entre ambientes (se aplicável)
 ├── COMO-USAR.md
-├── modulos/                     ← regras por assunto (inclui sincronizarAmbientes, se aplicável)
+├── modulos/                     ← regras por assunto (inclui cicloDesenvolvimento; sincronizarAmbientes, se aplicável)
 ├── sistemas/                    ← uma ficha por sistema (modelo: ficha-sistema.md)
-├── referencia/                  ← catálogos (implementações, padrões) + licoes-da-ia.md
+├── referencia/                  ← catálogos (implementações, padrões) + licoes-da-ia.md + ideias.md
 ├── progresso/                   ← histórico fatiado por mês
 ├── decisoes/                    ← ADRs
 ├── templates/                   ← esqueletos de código (opcional)

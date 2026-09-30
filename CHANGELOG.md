@@ -11,6 +11,16 @@ Versionamento: correção = 1.0.x · template ou seção nova = 1.x.0 · mudanç
 
 ---
 
+## v1.6.0 — 2026-09-30
+
+Ciclo de desenvolvimento promovido da Documentação Padrão do Kasuo (Mapa do Ciclo aprovado em 30/09/2026), generalizado para o template público.
+
+- [template novo] **`modulos/cicloDesenvolvimento.template.md`** — caminho único de todo desenvolvimento: **Triagem** (sistema novo, versão grande, funcionalidade, correção, ideia) → **Fases 0–7** (Descoberta, Requisitos, Arquitetura, Modularização e Plano, Construção, Qualidade e Segurança, Entrega, Operação) com portões de aprovação → **esteira de 15 passos** por entrega. A IA lê a Triagem e só a seção da fase. — interno
+- [template novo] **`referencia/ideias.template.md`** — lista de ideias separada do catálogo de sistemas + ficha da Fase 0 (13 perguntas, uma por vez; "Quem decide" perguntado a cada projeto). — interno
+- [template] **Ficha do sistema** ganha o status "ideia" e a seção **Requisitos** (só o estável; o combinado de cada entrega vai para `docs/entregas/` no repositório do sistema). — interno
+- [hub] **CLAUDE.md e Índice por Assunto apontam para o ciclo** ("Desenvolver", "Tenho uma ideia", "Criar sistema novo" começa pelo ciclo). — interno
+- Espelho `skill/metodo-norte/recursos/` e `metodo-norte.skill` regerados pelo `tools/build.js`.
+
 ## v1.5.0 — 2026-09-25
 
 Melhorias promovidas da Documentação Padrão do Kasuo depois da análise do ecossistema de IA de 24/09/2026 (arquivos grandes demais viravam "esquecimento" por truncamento).

@@ -7,7 +7,7 @@ ultima_revisao: AAAA-MM-DD
 
 # Ficha do Sistema – [Nome]
 
-> **ID:** `[id-curto]` · **Status:** [produção / desenvolvimento / legado]
+> **ID:** `[id-curto]` · **Status:** [ideia / produção / desenvolvimento / legado]
 > Voltar ao hub: [DocumentacaoPadrao.md](../DocumentacaoPadrao.template.md)
 
 > 📝 Uma ficha por sistema. O objetivo: a IA ler ISTO e saber onde mexer sem confundir
@@ -22,6 +22,16 @@ ultima_revisao: AAAA-MM-DD
 | Código | [caminho do repositório/pasta] |
 | Stack | [...] |
 | Banco | [...] |
+
+## Requisitos
+
+> 📝 Só o que é **estável** no sistema (o combinado de cada entrega fica em `docs/entregas/` no repositório do sistema).
+> Ficha antiga ganha esta seção quando for mexida pela primeira vez.
+
+| ID | Requisito | Pronto quando… |
+|----|-----------|----------------|
+| RF-01 | [...] | [...] |
+| RNF-01 | [...] | [...] |
 
 ## Estrutura de pastas
 

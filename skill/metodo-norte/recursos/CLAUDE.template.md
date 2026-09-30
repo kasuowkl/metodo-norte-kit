@@ -12,6 +12,10 @@ Antes de **qualquer** criação, alteração, correção, análise ou remoção 
 3. Leia **apenas** os módulos indicados pelo índice
 4. Confirme ao usuário: sistema, arquivos lidos e ação planejada
 
+## Para desenvolver
+
+Qualquer desenvolvimento (sistema novo, versão grande, funcionalidade, correção ou ideia) segue `modulos/cicloDesenvolvimento.md`: ler a **Triagem**, identificar a fase e ler **só a seção daquela fase** e a esteira da entrega.
+
 ## Stack obrigatória para sistemas novos
 
 Todo sistema **novo** deve usar: **[STACK PADRÃO]**.
