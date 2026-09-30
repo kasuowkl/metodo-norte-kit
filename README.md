@@ -4,7 +4,10 @@
 
 **Faça a IA desenvolver seus sistemas com consistência — sem alucinar tabelas, sem duplicar código, sem misturar projetos.**
 
-> ### 🆕 Novidades da v1.5.0 (2026-09)
+> ### 🆕 Novidades da v1.6.0 (2026-09)
+> - **Ciclo de Desenvolvimento** num arquivo só: **Triagem** (sistema novo, versão grande, funcionalidade, correção, ideia) → **Fases 0–7** com portão de aprovação → **esteira de 15 passos** por entrega. A IA lê a Triagem e só a seção da fase · **lista de ideias** com ficha de 13 perguntas, separada do catálogo · ficha do sistema com seção **Requisitos**.
+>
+> ### Novidades da v1.5.0 (2026-09)
 > - **Lições da IA** numa página lida em toda sessão · **ESTADO-ATUAL curto** (fechadas e detalhe saem do arquivo) · dica de **hook com índice curto** (limite de ~10 mil caracteres) · **validador** com ADR duplicada, tamanho e data de revisão. Ver [CHANGELOG](CHANGELOG.md).
 >
 > ### Novidades da v1.4.0 (2026-08)
@@ -102,4 +105,4 @@ Método extraído e refinado em produção real; contato para licenciamento, imp
 
 ---
 
-*Método Norte v1.5.0 — 2026-09 · © Kasuo · Open-source sob Licença MIT — ver [LICENSE.md](LICENSE.md)*
+*Método Norte v1.6.0 — 2026-09 · © Kasuo · Open-source sob Licença MIT — ver [LICENSE.md](LICENSE.md)*
