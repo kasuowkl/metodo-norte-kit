@@ -348,8 +348,8 @@ Cartão com o roteiro (onde abrir · 3–5 passos · o que a IA não testou) →
 - ❌ Sistema em produção sem saber quem é avisado quando cai.
 
 ## Esteira de cada entrega
-1. **Abrir a sessão** — Sincronizar a doc, ler hub → ESTADO → progresso → lições; identificar o ambiente (se houver mais de um). Responder a abertura no formato fixo (Regra #0b do hub).
-2. **Identificar sistema e tarefa** — Catálogo + regra anti-confusão + Índice por Assunto, **a cada pedido** (não só no início da sessão) — e gravar o Passo 4 antes de editar (Regra #0c do hub).
+1. **Abrir a sessão** — Sincronizar a doc, ler hub → ESTADO → progresso → lições; identificar o ambiente (se houver mais de um). Responder a abertura no formato fixo (Regra #16 do hub).
+2. **Identificar sistema e tarefa** — Catálogo + regra anti-confusão + Índice por Assunto, **a cada pedido** (não só no início da sessão) — e gravar o Passo 4 antes de editar (Regra #15 do hub).
 3. **Triagem do pedido** — Correção → esteira · melhoria pequena → Fase 2 curta · sistema novo ou mudança grande → Fase 1.
 4. **Modo conversa ou execução** — Dizer o modo. Em conversa, nenhum arquivo é tocado.
 5. **Reler o combinado** — Ler `docs/entregas/…`, a ficha e a lista de fatias — nunca o resumo do chat.
