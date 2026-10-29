@@ -11,6 +11,19 @@ Versionamento: correção = 1.0.x · template ou seção nova = 1.x.0 · mudanç
 
 ---
 
+## v2.0.0 — 2026-10-29
+
+Mudança estrutural do método: **ciclo v2** e **regras que não dependem da memória da IA**. Tudo promovido da Documentação Padrão do Kasuo depois de uso intensivo em outubro/2026 (casos reais: a IA leu só a abertura com o hub cortado pela ferramenta, emendou fatias sem esperar teste, respondeu "onde paramos" pelo resumo em vez do que foi dito, publicou com teste vermelho) — generalizado para o template público.
+
+- [estrutural] **Ciclo de Desenvolvimento v2** (`modulos/cicloDesenvolvimento.template.md`) — **8 Fases numeradas de 1 a 8** (Planejamento, Requisitos, Arquitetura, Modularização, Construção, Validação, Entrega, Manutenção) no lugar das Fases 0–7; **Decisões declaradas** (cada pergunta sozinha em cartão, padrão ★ + "Outro", uma por vez, resposta gravada na ficha, desvio do ★ vira ADR); **Regras entre Fases** (escopo × apetite, Fase que afeta outra, reaprovação pelo que mudou, pendência só bloqueia a fatia dela); **checklist em 2 níveis**; "Aprovação" no lugar de "Portão"; perguntas com opções em todas as Fases; Validação em duas partes (IA com evidência + usuário com Aprovada/ressalva/Reprovada com motivo). Ficha de ideias com as **15 perguntas** da Fase 1. — interno
+- [regra nova] **Regra #15 — Passo 4 antes de editar (com trava) · roteamento a cada pedido · leitura até o fim** (⚠️ anti-alucinação): a abertura é o começo da leitura; a cada pedido voltar ao Índice e ler os módulos dele; Passo 4 gravado e mostrado antes da 1ª edição, dizendo o que foi lido **inteiro** e o que foi **parcial**; documento cortado pela ferramenta se lê até o fim. — interno
+- [regra nova] **Regra #16 — abertura e status em formato fixo** (⚠️ anti-alucinação): Onde paramos (última fala, literal) · ✅ Feito · 👉 Falta EU fazer (1ª linha útil) · ⏳ Falta VOCÊ (separado) · 🔴 Pendências com o total do índice; proibida a tabela única que mistura tudo. — interno
+- [ferramenta nova] **`tools/hooks/`** (opcionais, Claude Code): `passo4-trava.js` (nega Edit/Write sem o Passo 4; lembrete do roteamento a cada mensagem — 8 casos), `ultima-sessao.js` (falas literais do fim da sessão anterior, segredo mascarado, teto de 6 mil — 10 casos), `contexto-abertura.js` (sincronia com o remoto + **índice de pendências gerado por contagem** + progresso, sem caminho no código — 8 casos), `LEIA-ME.md` (onde registrar, conta errada, teto de 10 mil, testar, desligar) e `settings.exemplo.json`. — interno
+- [regras no ciclo] **o combinado vale a cada pedido** · **exceção sem a fala do usuário é proposta da IA** · **"faça tudo" não suspende o ciclo** · **fatia no ar diz o que ainda falta do pedido** · **deploy só com teste verde** (trava no resultado exato; `npm test | grep fail && deploy` publica com teste vermelho). — interno
+- [lições] `licoes-da-ia.template.md` ganha os grupos **Abertura e status** e **Publicação** e 6 lições de exemplo vindas desses casos. — interno
+- [hub] aviso "ler este hub é o começo da leitura" no Protocolo; Regra #0 aponta para o formato da #16 e para os hooks; Passo 4 e Checklist final atualizados. — interno
+- [skill] MODO OPERAÇÃO com roteamento a cada pedido, Passo 4 antes da 1ª edição, abertura no formato fixo e o ciclo v2. Espelho `skill/metodo-norte/recursos/` e `metodo-norte.skill` regerados pelo `tools/build.js`.
+
 ## v1.6.0 — 2026-09-30
 
 Ciclo de desenvolvimento promovido da Documentação Padrão do Kasuo (Mapa do Ciclo aprovado em 30/09/2026), generalizado para o template público.

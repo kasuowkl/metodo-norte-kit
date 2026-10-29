@@ -30,11 +30,14 @@ Antes de **qualquer** criação, alteração, correção, análise ou remoção 
    houver **ambientes espelhados**, saiba/**pergunte em qual ambiente** você está antes de agir (as
    pendências a reportar são as dele) e, se a doc mora em git, verifique se o clone está atrás do
    remoto e **pergunte** antes de dar `git pull` (para reportar a lista atual). Nunca puxar/subir sozinho.
-1. **Leia o hub** `DocumentacaoPadrao.md` da pasta de documentação do projeto
+   **Formato fixo (Regra #16):** Onde paramos (a última fala do usuário na sessão anterior, literal — do hook
+   `ultima-sessao.js` ou do histórico) · ✅ Feito (conferido no git/servidor) · 👉 Falta EU fazer (1ª linha útil) ·
+   ⏳ Falta VOCÊ (testes/decisões dele, separados) · 🔴 Pendências com o total do índice. Nunca uma tabela única que misture.
+1. **Leia o hub** `DocumentacaoPadrao.md` da pasta de documentação do projeto — **inteiro**: se a ferramenta de leitura cortar, leia o resto antes de qualquer outra ação (Regra #15)
 2. **Identifique o sistema** no Catálogo de Sistemas (+ o **ambiente**, se houver mais de um). Se não estiver claro, **pergunte antes de executar**
-3. **Identifique a tarefa** no Índice por Assunto e leia **apenas** os arquivos indicados (não leia tudo)
-4. **Confirme o plano** antes de executar, neste formato:
-   - Sistema identificado (+ ambiente) · Tipo de tarefa · Arquivos lidos · Área impactada · Risco principal · Ação planejada
+3. **Identifique a tarefa** no Índice por Assunto e leia **apenas** os arquivos indicados (não leia tudo) — **a cada pedido**, inclusive o que nasce no meio da conversa. Desenvolver/funcionalidade/correção → `cicloDesenvolvimento.md` (Triagem + a Fase dela: uma fatia por vez, plano de 3 linhas, parar para o teste do usuário; "faça tudo" não suspende o ciclo)
+4. **Grave e mostre o Passo 4** antes da **primeira edição** de cada pedido (Regra #15; com a trava instalada, a edição é negada sem ele):
+   - Sistema identificado (+ ambiente) · Tipo de tarefa · Arquivos lidos (**inteiro** ou **parcial**) · Área impactada · Risco principal · Ação planejada
    - **Define Done:** declare em 1–2 frases o que é "concluído" **e como será verificado** (qual comando/tela/valor prova). Sem critério de verificação, não comece.
 5. **Execute** respeitando as Regras de Ouro do hub — em especial: não inventar tabelas/rotas/pastas (verificar o código real), usar os componentes do catálogo de padrões em vez de criar novos, segredos só no `.env`. Se corrigir um bug, **procure os gêmeos** (mesmo padrão em outros lugares — linha `TWINS:`). Se a verificação falhar **3 vezes**, pare e devolva o estado (não fique em loop).
 6. **Verifique por observação** (não por inferência): confirme o "Define Done" **rodando/vendo** o resultado, não deduzindo. Só então, **ao concluir:** entrada curta no topo de `progresso/AAAA-MM.md` do mês corrente + atualizar `ESTADO-ATUAL.md` se status/pendências mudaram + se mexeu na doc, rodar `node tools/validar-doc.js` (não commitar com erro)

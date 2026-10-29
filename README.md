@@ -4,8 +4,14 @@
 
 **Faça a IA desenvolver seus sistemas com consistência — sem alucinar tabelas, sem duplicar código, sem misturar projetos.**
 
-> ### 🆕 Novidades da v1.6.0 (2026-09)
-> - **Ciclo de Desenvolvimento** num arquivo só: **Triagem** (sistema novo, versão grande, funcionalidade, correção, ideia) → **Fases 0–7** com portão de aprovação → **esteira de 15 passos** por entrega. A IA lê a Triagem e só a seção da fase · **lista de ideias** com ficha de 13 perguntas, separada do catálogo · ficha do sistema com seção **Requisitos**.
+> ### 🆕 Novidades da v2.0.0 (2026-10)
+> - **Ciclo v2:** 8 Fases (Planejamento → Manutenção), cada decisão **num cartão** com o seu padrão ★ + "Outro", uma pergunta por vez, resposta gravada na ficha; regras entre Fases (escopo × apetite) e checklist em 2 níveis.
+> - **Regra #15 — Passo 4 antes de editar:** a cada pedido a IA volta ao Índice, lê os módulos dele (até o fim, se a ferramenta cortar) e grava o Passo 4 antes da 1ª edição. **Regra #16 — abertura em formato fixo:** onde paramos (fala literal) · feito · falta a IA · falta você · pendências com o total.
+> - **Hooks opcionais (Claude Code)** em `template/tools/hooks/`: a **trava** que nega edição sem o Passo 4, o **fim da sessão anterior** injetado literalmente e o **índice de pendências por contagem** — com testes.
+> - Regras de publicação e de entrega: **deploy só com teste verde** · **fatia no ar diz o que falta do pedido**. Ver [CHANGELOG](CHANGELOG.md).
+>
+> ### Novidades da v1.6.0 (2026-09)
+> - **Ciclo de Desenvolvimento** num arquivo só (Triagem → fases → esteira de 15 passos) · **lista de ideias** separada do catálogo · ficha do sistema com seção **Requisitos**.
 >
 > ### Novidades da v1.5.0 (2026-09)
 > - **Lições da IA** numa página lida em toda sessão · **ESTADO-ATUAL curto** (fechadas e detalhe saem do arquivo) · dica de **hook com índice curto** (limite de ~10 mil caracteres) · **validador** com ADR duplicada, tamanho e data de revisão. Ver [CHANGELOG](CHANGELOG.md).
@@ -105,4 +111,4 @@ Método extraído e refinado em produção real; contato para licenciamento, imp
 
 ---
 
-*Método Norte v1.6.0 — 2026-09 · © Kasuo · Open-source sob Licença MIT — ver [LICENSE.md](LICENSE.md)*
+*Método Norte v2.0.0 — 2026-10 · © Kasuo · Open-source sob Licença MIT — ver [LICENSE.md](LICENSE.md)*

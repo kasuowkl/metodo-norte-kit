@@ -67,6 +67,7 @@ Se preferir preencher à mão, esta é a ordem que funciona melhor:
 - [ ] `CLAUDE.md` (ou equivalente) apontando para o hub em cada projeto
 - [ ] Teste de fogo: peça à IA uma tarefa real e confira se ela responde no formato "Sistema identificado / Arquivos lidos / Plano" antes de executar
 - [ ] Regra de manutenção combinada com a equipe: **toda ação relevante gera entrada no `progresso/AAAA-MM.md`**
+- [ ] *(Opcional, Claude Code)* hooks de `tools/hooks/` registrados no `.claude/settings.local.json` do projeto (ver `tools/hooks/LEIA-ME.md`) e provados numa **sessão nova**: a 1ª resposta cita o total do índice e a última fala da sessão anterior; a 1ª edição sem o Passo 4 é negada
 
 ## Como saber que está funcionando
 
