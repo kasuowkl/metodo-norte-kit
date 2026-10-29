@@ -216,7 +216,7 @@ Após identificar o sistema, localize o tipo de solicitação.
       Edit/Write) **nega a edição** enquanto não existir o arquivo do Passo 4 da sessão com os 6 campos e, nos arquivos lidos,
       este hub e as lições; a negação diz o caminho exato. O mesmo script (modo lembrete, `UserPromptSubmit`) repete o
       roteamento a cada mensagem do usuário. Erro interno da trava **libera e avisa** (não trava o trabalho). Instalação e como
-      desligar: [tools/hooks/LEIA-ME.md](tools/hooks/LEIA-ME.md).
+      desligar: `tools/hooks/LEIA-ME.md`.
     - **Limite honesto:** a trava garante que o Passo 4 **existe**, não que a leitura declarada foi feita. Declarar "li" sem ler
       é mentir no registro — o usuário confere pela lista, e a IA marca **parcial** quando for parcial.
     > 💥 **Origem (uso real, 10/2026):** a IA leu só a abertura (o hub veio **cortado pela ferramenta** e ela seguiu), pulou o
