@@ -1,0 +1,28 @@
+{
+  "_comentario": "MODELO — copie os blocos para <pasta do projeto>/.claude/settings.local.json (junte, nao substitua) e troque <DOC> pelo caminho da sua documentacao. Veja tools/hooks/LEIA-ME.md.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          { "type": "command", "command": "node \"<DOC>/tools/hooks/contexto-abertura.js\"", "timeout": 30 },
+          { "type": "command", "command": "node \"<DOC>/tools/hooks/ultima-sessao.js\"", "timeout": 10 }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|NotebookEdit",
+        "hooks": [
+          { "type": "command", "command": "node \"<DOC>/tools/hooks/passo4-trava.js\"", "timeout": 10 }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          { "type": "command", "command": "node \"<DOC>/tools/hooks/passo4-trava.js\" --lembrete", "timeout": 10 }
+        ]
+      }
+    ]
+  }
+}
