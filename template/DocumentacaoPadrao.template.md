@@ -96,7 +96,7 @@ Após identificar o sistema, localize o tipo de solicitação.
 | Se o usuário pedir... | Ler nesta ordem |
 |----------------------|-----------------|
 | **Desenvolver (sistema novo, versão grande, funcionalidade, correção, ideia)** | [modulos/cicloDesenvolvimento.md](modulos/cicloDesenvolvimento.template.md) — ler a Triagem e **só a seção da fase** |
-| **Tenho uma ideia / "vamos conversar"** | [modulos/cicloDesenvolvimento.md](modulos/cicloDesenvolvimento.template.md) (Fase 0, modo conversa) + [referencia/ideias.md](referencia/ideias.template.md) |
+| **Tenho uma ideia / "vamos conversar"** | [modulos/cicloDesenvolvimento.md](modulos/cicloDesenvolvimento.template.md) (Fase 1 — Planejamento, modo conversa) + [referencia/ideias.md](referencia/ideias.template.md) |
 | **Qualquer tarefa no sistema principal** | [modulos/regrasGerais.md](modulos/regrasGerais.template.md) |
 | Criar sistema novo do zero | [modulos/cicloDesenvolvimento.md](modulos/cicloDesenvolvimento.template.md) + [modulos/stackPadrao.md](modulos/stackPadrao.template.md) |
 | Criar ou alterar módulo/feature | [modulos/criarAlterar.md](modulos/criarAlterar.template.md) |
