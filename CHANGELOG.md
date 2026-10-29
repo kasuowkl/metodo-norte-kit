@@ -22,6 +22,7 @@ Mudança estrutural do método: **ciclo v2** e **regras que não dependem da mem
 - [regras no ciclo] **o combinado vale a cada pedido** · **exceção sem a fala do usuário é proposta da IA** · **"faça tudo" não suspende o ciclo** · **fatia no ar diz o que ainda falta do pedido** · **deploy só com teste verde** (trava no resultado exato; `npm test | grep fail && deploy` publica com teste vermelho). — interno
 - [lições] `licoes-da-ia.template.md` ganha os grupos **Abertura e status** e **Publicação** e 6 lições de exemplo vindas desses casos. — interno
 - [hub] aviso "ler este hub é o começo da leitura" no Protocolo; Regra #0 aponta para o formato da #16 e para os hooks; Passo 4 e Checklist final atualizados. — interno
+- [apresentação] slides 4 (protocolo: a cada pedido, grava o plano com trava), 6 (abertura em formato fixo, Passo 4), 9 (26 arquivos, ciclo de 8 fases, hooks) e 12 (v2.0.0) — só texto, editado no XML (imagens e fontes intactas, conferido no PowerPoint).
 - [skill] MODO OPERAÇÃO com roteamento a cada pedido, Passo 4 antes da 1ª edição, abertura no formato fixo e o ciclo v2. Espelho `skill/metodo-norte/recursos/` e `metodo-norte.skill` regerados pelo `tools/build.js`.
 
 ## v1.6.0 — 2026-09-30
